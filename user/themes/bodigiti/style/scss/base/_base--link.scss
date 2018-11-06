@@ -1,0 +1,54 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Link Base
+////////////////////////////////////////////////////////////////////////////////
+
+a {
+  color: $color4;
+  text-decoration: none;
+  &:hover {
+    color: $color3;
+    text-decoration: underline;
+  }
+  &.link-important {
+    color: $color4;
+  }
+}
+
+
+//
+// Anchor overrides
+//
+a {
+  .black {
+    color: $color1;
+  }
+  .red {
+    color: $color4;
+  }
+}
+
+//
+// Target on-page anchor tags
+// This keeps on-page anchor tags from appearing as hyperlinks
+//
+a[id] {
+  color: $color1;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Other....
+a.text-decoration--none {
+  text-decoration: none;
+}
+
+a.negate {
+  color: $color1;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}

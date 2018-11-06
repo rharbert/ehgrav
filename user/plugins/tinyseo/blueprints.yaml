@@ -1,0 +1,138 @@
+name: "Tiny SEO"
+version: "1.1.1"
+description: "Provide a simple way to manage SEO from admin."
+icon: "sitemap"
+author:
+  name: jimblue
+keywords: 'grav, plugin, seo'
+license: MIT
+homepage: 'https://github.com/jimblue/grav-plugin-tinyseo'
+bugs: 'https://github.com/jimblue/grav-plugin-tinyseo/issues'
+docs: 'https://github.com/jimblue/grav-plugin-tinyseo/blob/master/README.md'
+dependencies:
+  - admin
+form:
+  validation: strict
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+            enabled:
+              type: toggle
+              label: PLUGIN_ADMIN.PLUGIN_STATUS
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+            robots_section:
+              type: section
+              title: Robots
+              underline: true
+              fields:
+                meta_robots:
+                  type: checkboxes
+                  label: PLUGIN_TINYSEO.ROBOT
+                  default:
+                    index: true
+                    follow: true
+                    noindex: false
+                    nofollow: false
+                    noimageindex: false
+                  options:
+                    index: index
+                    follow: follow
+                    noindex: noindex
+                    nofollow: nofollow
+                    noimageindex: noimageindex
+                  use: keys
+            description_section:
+              type: section
+              title: Description
+              underline: true
+              fields:
+                description_length:
+                  type: range
+                  label: PLUGIN_TINYSEO.DESCRIPTION_LABEL
+                  placeholder: PLUGIN_TINYSEO.DESCRIPTION_PLACEHOLDER
+                  validate:
+                    type: number
+                    min: 1
+                    max: 200
+            truncate_break:
+              type: select
+              size: large
+              label: PLUGIN_TINYSEO.TRUNCATE_BREAK.LABEL
+              highlight: 1
+              options:
+                  character: PLUGIN_TINYSEO.TRUNCATE_BREAK.CHARACTER
+                  world: PLUGIN_TINYSEO.TRUNCATE_BREAK.WORD
+                  sentence: PLUGIN_TINYSEO.TRUNCATE_BREAK.SENTENCE
+            ogimage_section:
+              type: section
+              title: Image
+              underline: true
+              fields:
+                backup_image:
+                  type: filepicker
+                  size: large
+                  label: PLUGIN_TINYSEO.BACKUP_IMAGE
+                  folder: 'theme@:/medias/uploaded'
+                  preview_images: true
+                  accept:
+                    - .png
+                    - .jpg
+            title_section:
+              type: section
+              title: PLUGIN_TINYSEO.TITLE
+              underline: true
+              fields:
+                site_title:
+                  type: text
+                  size: large
+                  label: PLUGIN_TINYSEO.SITE_TITLE
+                  config-default@: site.title
+            twitter_section:
+              type: section
+              title: Twitter
+              underline: true
+              fields:
+                twitterid:
+                  type: text
+                  size: large
+                  label: Twitter ID
+                twitter_card_type:
+                  type: select
+                  size: large
+                  label: PLUGIN_TINYSEO.TWITTER
+                  options:
+                    summary: Summary
+                    summary_large_image: Summary Large Image
+            facebook_section:
+              type: section
+              title: Facebook
+              underline: true
+              fields:
+                facebookid:
+                  type: text
+                  size: large
+                  label: Facebook App ID
+        medias:
+          type: tab
+          title: Medias
+          fields:
+            images:
+              type: file
+              destination: 'theme@:/medias/uploaded'
+              multiple: true
+              style: vertical
+              accept:
+                - .png
+                - .jpg

@@ -1,0 +1,6 @@
+<aside id="sidebar-one" class="section sidebar" role="complementary">
+  {# Content Injected Components #}
+  {% for c in page.header.region__sidebar_one__content %}
+    {% include 'modules/modules.html.twig' with {'page': page.find(c.content_inject__url)} %}
+  {% endfor %}
+</aside>

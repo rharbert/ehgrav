@@ -1,0 +1,31 @@
+
+.sprite-mfr-logo {
+  width: 210px;
+  text-align: center;
+  margin: 0px 20px 0px 20px;
+  display: inline-block;
+  p, h3 {
+    margin-top: .25em;
+    margin-bottom: 2em; 
+    font-weight: bold; 
+    text-transform: uppercase;
+  } 
+}
+
+
+.sprite-mfr-logo-1 {
+  @include sprite($freightliner);
+}
+.sprite-mfr-logo-2 {
+  @include sprite($isuzu);
+}
+.sprite-mfr-logo-3 {
+  @include sprite($sprinter);
+}
+.sprite-mfr-logo-4 {
+  @include sprite($volvo);
+}
+.sprite-mfr-logo-5 {
+  @include sprite($western-star);
+}
+

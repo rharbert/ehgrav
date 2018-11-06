@@ -1,0 +1,57 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Font Size Overrides (base-and-component-support)
+////////////////////////////////////////////////////////////////////////////////
+
+.font-size-tiny {
+  @include font-size-only($font-tiny);
+}
+.font-size-smaller {
+  @include font-size-only($font-smaller);
+}
+.font-size-small {
+  @include font-size-only($font-small);
+}
+.font-size-base {
+  @include font-size-only($font-base);
+}
+.font-size-base-plus {
+  @include font-size-only($font-base-plus);
+}
+.font-size-standard {
+  @include font-size-only($font-standard);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Font Weight Overrides
+////////////////////////////////////////////////////////////////////////////////
+
+//
+// Font-weight Bold
+//
+.font-weight.bold,
+.font-weight-bold {
+  font-weight: $font-weight-bold;
+}
+.font-weight-bold,
+.font-weight.bold,
+.font-weight .bold {
+  div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
+    font-weight: $font-weight-bold;
+  }
+}
+
+//
+// Font-weight Regular
+//
+.font-weight-regular,
+.font-weight.regular {
+  font-weight: $font-weight-regular;
+}
+.font-weight-regular,
+.font-weight.regular,
+.font-weight .regular {
+  div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
+    font-weight: $font-weight-regular;
+  }
+}

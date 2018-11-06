@@ -1,0 +1,13 @@
+
+.big-message {
+  @include row;
+    padding: 0 16px;
+    padding: 0 1rem;
+    margin-top: 32px;
+    margin-top: 2rem;
+    margin-bottom: 32px;
+    margin-bottom: 2rem;
+    @include breakpoint($med, true) {
+    padding: 0 10rem 0 10rem;
+  }
+}

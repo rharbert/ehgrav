@@ -1,0 +1,216 @@
+title: Modules
+'@extends':
+  type: default
+  context: blueprints://pages
+
+# Notes about import@
+# Imports always end up first, and then you cannot place fields after/under the
+# import because the fields placed after import@ will not work.
+# Example:
+#  import@:
+#  type: modules/module-styles-text
+#  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+################################################################################
+############### Start Images tab (Originally = Content tab)
+################################################################################
+        content: # Images tab
+          ordering@: -3
+          title: Images
+          fields:
+
+################################################################################
+############### Hero
+            fieldset__hero:
+              ordering@: -1
+              type: fieldset
+              title: Hero
+              collapsed: true
+              collapsible: true
+              classes: 'toggle module__hero'
+              import@:
+                type: modules/module-hero
+                context: blueprints://pages
+            ## Images tab additional
+            header.title:
+              unset@: true
+            content:
+              unset@: true
+
+################################################################################
+############### Start Modules tab
+################################################################################
+        modules:
+          ordering@: -4
+          type: tab
+          title: Modules
+          fields:
+#############
+            header.title:
+              type: text
+              toggleable: true
+              label: Page Title (optional)
+
+            header.module:
+              name: module
+              type: list
+              style: vertical
+              controls: both
+              # collapsed: true
+
+              fields:
+############### Admin Title
+                .module__admin_title:
+                  type: text
+                  style: vertical
+                  placeholder: Admin title
+
+############### Module Type
+                .module_list:
+                  name: module
+                  type: list
+                  style: vertical
+                  fields:
+                    .module__admin_title_child:
+                      type: text
+                      style: vertical
+                      placeholder: Admin title
+                    .module_type:
+                      type: toggle
+                      style: vertical
+                      classes: 'module_toggle'
+                      default: module__text_image
+                      options:
+                        module__text_image: 'Content'
+                        module__content_inject: 'Content Inject'
+                        module__form_inject: 'Form Inject'
+
+################################################################################
+################### Module Text + Image
+                    .fieldset__text_image:
+                      type: fieldset
+                      title: Content
+                      collapsed: true
+                      collapsible: true
+                      classes: 'toggle module__text_image'
+                      import@:
+                        type: modules/module-text-image
+                        context: blueprints://pages
+
+################################################################################
+################### Module Content Inject
+                    .fieldset__content_inject:
+                      type: fieldset
+                      title: Content Inject
+                      collapsed: true
+                      collapsible: true
+                      classes: 'toggle module__content_inject'
+                      import@:
+                        type: modules/module-content-inject
+                        context: blueprints://pages
+
+################################################################################
+################### Module Form Inject
+                    .fieldset__form_inject:
+                      type: fieldset
+                      title: Form Inject
+                      collapsed: true
+                      collapsible: true
+                      classes: 'toggle module__form_inject'
+                      import@:
+                        type: modules/module-form-inject
+                        context: blueprints://pages
+
+################################################################################
+################### Other: Styles for child-modules
+                    .fieldset__other__child:
+                      type: fieldset
+                      title: Styles
+                      collapsed: true
+                      collapsible: true
+                      classes: 'module__styles'
+                      fields:
+
+                        .module_styles__text_child:
+                          type: text
+                          label: Styles
+                          placeholder: 'Enter CSS classes'
+                          toggleable: true
+                          classes: 'module__styles'
+
+                        # Custom Select list from theme's php file: bodigiti.php
+                        .module_styles__select_child:
+                          type: select
+                          label: Styles Select
+                          placeholder: 'Select CSS classes'
+                          toggleable: true
+                          classes: 'module__styles'
+                          multiple: true
+                          data-options@: '\Grav\Theme\Bodigiti::styleSelect'
+
+################################################################################
+############### Other: Styles, Published...
+                .fieldset__other:
+                  type: fieldset
+                  title: Styles, Published
+                  collapsed: true
+                  collapsible: true
+                  classes: 'module__styles'
+                  fields:
+
+                    .module_styles__text:
+                      type: text
+                      label: Styles
+                      placeholder: 'Enter CSS classes'
+                      toggleable: true
+                      classes: 'module__styles'
+
+                    # Custom Select list from theme's php file: bodigiti.php
+                    .module_styles__select:
+                      type: select
+                      label: Styles Select
+                      placeholder: 'Select CSS classes'
+                      toggleable: true
+                      classes: 'module__styles'
+                      multiple: true
+                      data-options@: '\Grav\Theme\Bodigiti::styleSelect'
+
+                    .module_isotope:
+                      type: toggle
+                      style: horizontal
+                      label: Isotope Grid
+                      default: 0
+                      options:
+                        1: 'Yes'
+                        0: 'No'
+
+                    .module_published:
+                      type: toggle
+                      style: horizontal
+                      label: Published
+                      default: 1
+                      options:
+                        1: 'Yes'
+                        0: 'No'
+
+########### Styles Text
+            header.module_styles__text:
+              type: text
+              toggleable: true
+              label: Styles (does not work for 'Regions')
+              placeholder: 'Enter CSS classes'
+
+            # Custom Select list from theme's php file: bodigiti.php
+            header.module_styles__select:
+              type: select
+              toggleable: true
+              label: Styles Select (does not work for 'Regions')
+              placeholder: 'Select CSS classes'
+              multiple: true
+              data-options@: '\Grav\Theme\Bodigiti::styleSelect'
+              validate:
+                type: array

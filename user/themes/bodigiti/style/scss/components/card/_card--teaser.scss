@@ -1,0 +1,41 @@
+
+////////////////////////////////////
+// Card: Teaser
+////////////////////////////////////
+
+// note: cannot use as mixin for _para--callouts.scss because markup is different
+.card-teaser {
+  max-width: 240px;
+  a {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    &:hover {
+      text-decoration: none;
+      opacity: .8;
+    }
+  }
+  .title {
+    background: $color3;
+    margin: 0;
+    a {
+      color: $color2;
+      padding: 1rem;
+      text-align: center;
+    }
+  }
+  img {
+    // so there is zero margin below the image
+    display: block;
+  }
+  .text-cta a {
+    @include font-size($font-base-plus);
+    background: $color5;
+    padding: 1rem;
+    text-align: center;
+    &:hover {
+      text-decoration: underline;
+    } 
+  }
+}
+

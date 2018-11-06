@@ -1,0 +1,59 @@
+
+.knockout {
+  padding: 1rem;
+  span:first-of-type,
+  h1:first-of-type,
+  h1:last-of-type,
+  h2:first-of-type,
+  h2:last-of-type,
+  h3:first-of-type,
+  h3:last-of-type,
+  p:first-of-type,
+  p:last-of-type,
+  // Duplicate for & inline
+  &span:first-of-type,
+  &h1:first-of-type,
+  &h1:last-of-type,
+  &h2:first-of-type,
+  &h2:last-of-type,
+  &h3:first-of-type,
+  &h3:last-of-type,
+  &p:first-of-type,
+  &p:last-of-type {
+    margin: 0;
+  } 
+  &.black {
+    background: $color1;
+    span, h1, h2, h3, p, ul, ol, li {
+      color: $color2;
+    }
+  }
+  &.white {
+    background: $color2;
+    span, h1, h2, h3, p, ul, ol, li {
+      color: $color1;
+    }
+  }
+  &.primary {
+    background: $color3;
+    span, h1, h2, h3, p, ul, ol, li {
+      color: $color2;
+    }
+  }
+  &.secondary {
+    background: $color4;
+    span, h1, h2, h3, p, ul, ol, li {
+      color: $color2;
+    }
+  }
+  &.dark {
+    background: $color6;
+    span, h1, h2, h3, p, ul, ol, li {
+      color: $color2;
+    }
+  }
+  &.contained {
+    display: inline-block;
+  }
+}
+

@@ -1,0 +1,124 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Font-Assignment Base
+////////////////////////////////////////////////////////////////////////////////
+
+//
+// Non-semantic elements
+//
+
+div, span {
+  font-family: $font-family-headings;
+}
+
+
+//
+// Font-weight classes
+//
+
+.fw {
+  &-light {
+  font-weight: $font-weight-light;
+  }
+  &-regular {
+  font-weight: $font-weight-regular;
+  }
+  &-medium {
+  font-weight: $font-weight-medium;
+  }
+}
+
+//
+// Headings
+//
+
+h1,
+.h1-alt {
+  font-family: $font-family-headings;
+  font-weight: $font-weight-regular;
+  @include font-size-only($font-xxlarge);
+  @include line-height($line-height-7);
+}
+
+h2,
+.h2-alt {
+  font-family: $font-family-headings;
+  font-weight: $font-weight-regular;
+  @include font-size-only($font-large);
+  @include line-height($line-height-5);
+  margin: 0.83rem 0;
+  a {
+    color: $color3;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+h3,
+.h3-alt {
+  font-family: $font-family-headings;
+  font-weight: $font-weight-light;
+  @include font-size($font-medium-large, $line-height-4);
+  margin: 1rem 0;
+  &.subtitle {
+    margin-top: 0;
+  }
+}
+
+h4,
+,.h4-alt {
+  font-family: $font-family-headings;
+  font-weight: $font-weight-light;
+}
+
+h5,
+.h5-alt {
+  font-family: $font-family-headings;
+  font-weight: $font-weight-light;
+}
+
+h6,
+.h6-alt {
+  font-family: $font-family-headings;
+  font-weight: $font-weight-light;
+}
+
+//
+// Text-specific not headings
+//
+
+p,li {
+  font-family: $font-family-headings;
+  font-weight: $font-weight-light;
+  color: $color1;
+  @include font-size($font-standard);
+}
+
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+pre {
+  background: $gray3;
+  padding: 2rem;
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+figcaption {
+  color: $color1;
+  text-align: center;
+  padding: .5rem 0 0 0;
+  @include font-size($font-small, $font-small);
+  .text-align__left {
+    text-align: left;
+  }
+  .text-align__right {
+    text-align: left;
+  }
+}

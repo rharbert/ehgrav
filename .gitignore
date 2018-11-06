@@ -1,0 +1,54 @@
+# Bodigiti Gitignore
+
+# Composer
+.composer
+
+# Sass
+.sass-cache
+
+# Grav Specific
+backup/*
+!backup/.*
+cache/*
+!cache/.*
+assets/*
+!assets/.*
+logs/*
+!logs/.*
+images/*
+!images/.*
+user/accounts/*
+!user/accounts/.*
+user/data/*
+!user/data/.*
+user/pages/*
+!user/pages/.*
+#####################
+# Security.yaml
+user/localhost/config/security.yaml
+user/config/security.yaml
+# Security wildcard for domain-specific configs
+user/*/config/security.yaml
+#
+#####################
+
+# Plugins
+user/config/plugins/email.yaml
+user/*/config/plugins/email.yaml
+
+# Theme
+user/themes/*/node_modules
+
+# OS Generated
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+*.swp
+
+# phpstorm
+.idea/*
+tests/_output/*
+tests/_support/_generated/*
+tests/cache/*
+tests/error.log

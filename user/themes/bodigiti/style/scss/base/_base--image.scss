@@ -1,0 +1,17 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Images Base (Important overrides CKEditor inline styles)
+////////////////////////////////////////////////////////////////////////////////
+
+img,
+media {
+//  width: auto !important; Previously was "max-width: 100%" but that fails IE8
+  max-width: 100%;
+  height: auto;
+}
+
+.image__center,
+.image__center img {
+  margin-right: auto;
+  margin-left: auto;
+}

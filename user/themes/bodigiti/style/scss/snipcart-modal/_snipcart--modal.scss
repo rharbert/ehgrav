@@ -1,0 +1,26 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Snipcart: Modal (snipcart component)
+////////////////////////////////////////////////////////////////////////////////
+
+// Thumbnail image
+.snip-layout .snip-product__thumbnail {
+  display: block; // snipcart default is display non until larger breakpoint
+  width: 120px;
+  height: auto;
+}
+// Powered by Snipcart
+#snipcart-footer {
+  display: none;
+}
+// Title areas "My Cart"
+.snip-layout .snip-header__title {
+  font-size: 14px;
+  color: $color2;
+  left: 1.25em;
+  line-height: 105px;
+}
+// Subtotal
+.snip-layout #snipcart-amount {
+  color: $color2;
+}

@@ -1,0 +1,58 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Product Teaser List (component)
+////////////////////////////////////////////////////////////////////////////////
+
+.product-teasers {
+  text-align: center;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Product Teaser (component)
+////////////////////////////////////////////////////////////////////////////////
+
+.product-teaser {
+  display: inline-block; // cannot float if want to align-center via .shop-items
+  width: 49%;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 40px;
+  @include breakpoint($size-sm-plus) {
+    width: 32.75%;
+  }
+  @include breakpoint($size-lg) {
+    width: 24.5%;
+  }
+  .product--image {
+    // Prevent white space under image
+    font-size: 0;
+    line-height: 0;
+  }
+  .product--header {
+    padding-top: 5px;
+  }
+  .product--price {
+    float: right;
+    text-align: right;
+  }
+  .product--title {
+    // Keep long title from wrapping, hide excess text, add ellipsis for excess
+    white-space: nowrap;
+    max-width: 73%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+  }
+  .product--price,
+  .product--title {
+    @include font-size($font-tiny);
+    color: $gray9;
+    font-weight: bold;
+    @include breakpoint($size-sm) {
+      @include font-size($font-tiny-plus);
+    }
+  }
+  a, a:hover {
+    text-decoration: none;
+  }
+}

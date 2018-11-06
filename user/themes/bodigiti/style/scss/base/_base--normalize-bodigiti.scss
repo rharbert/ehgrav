@@ -1,0 +1,22 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Normalize-Bodigiti Base
+////////////////////////////////////////////////////////////////////////////////
+
+//
+// Use the saner border-box model for all elements.
+// https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+section.header-inner {
+  border-bottom: 1px solid $gray5;
+
+}

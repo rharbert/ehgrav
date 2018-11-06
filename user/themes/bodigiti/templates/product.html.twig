@@ -1,0 +1,26 @@
+{% extends 'partials/base.html.twig' %}
+
+{# Layout Class for <body> #}
+{% set body_layout = 'layout-product' %}
+{% block body_layout %}{{ body_layout }}{% endblock %}
+{# End: Layout Class for <body> #}
+
+{% block content %}
+  <section id="main-wrapper">
+    <section id="main">
+      <main id="main-content">
+
+          {# Shop Navigation #}
+          {% include 'shop/navigation.html.twig' %}
+          {# End: Shop Navigation #}
+
+          {# Product Item #}
+          {% block item %}
+            {% include 'shop/product-info.html.twig' %}
+          {% endblock %}
+          {# End: Product Item #}
+
+      </main>
+    </section>
+  </section>
+{% endblock %}

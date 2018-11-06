@@ -1,0 +1,10 @@
+{% extends 'partials/base.html.twig' %}
+
+
+{% block title %}
+  {% include 'partials/title.html.twig' ignore missing %}
+{% endblock %}
+
+{% block content %}
+  {{ page.content }}
+{% endblock %}

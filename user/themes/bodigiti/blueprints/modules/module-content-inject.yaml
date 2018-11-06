@@ -1,0 +1,17 @@
+form:
+  fields:
+################################################################################
+############### Module Content Inject
+    .content_inject__url:
+      type: text
+      label: Content Inject
+      toggleable: true
+    .content_inject__type:
+      type: toggle
+      label: Content Type
+      toggleable: true
+      default: modules
+      options:
+        modules: "Modules"
+        product: "Product"
+      

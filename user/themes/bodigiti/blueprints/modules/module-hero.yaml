@@ -1,0 +1,38 @@
+form:
+  fields:
+################################################################################
+############### Hero
+    header.hero__visible:
+      type: toggle
+      toggleable: true
+      label: PLUGIN_ADMIN.VISIBLE
+      help: PLUGIN_ADMIN.VISIBLE_HELP
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    header.hero__size_class:
+      type: select
+      classes: fancy
+      label: Hero Size
+      default: hero-default
+      toggleable: true
+      options:
+        hero-default: "Hero Default"
+        hero-xlarge: "Hero X-Large"
+    header.hero__image:
+      type: filepicker
+      label: Hero Image
+      preview_images: true
+      description: 'If not specified, this defaults to the first image found in the page''s folder'
+      toggleable: true
+    header.hero__content:
+      type: markdown
+      validate:
+        type: textarea
+header.title:
+  unset@: true
+content:
+  unset@: true

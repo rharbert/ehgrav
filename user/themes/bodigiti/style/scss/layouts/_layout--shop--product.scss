@@ -1,0 +1,54 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Shop + Product Layouts
+////////////////////////////////////////////////////////////////////////////////
+
+.layout-shop,
+.layout-product {
+  //
+  // Main
+  //
+  #main-wrapper {
+
+  }
+  #main {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 4rem;
+  }
+  #main-content {
+    @include row;
+    @include breakpoint($size-lg) {
+      margin-top: 3rem;
+    }
+  }
+  //
+  //  Menu Shop
+  //
+  #menu-shop {
+    display: none;
+  }
+}
+
+.layout-product {
+  //
+  // Main
+  //
+  #main {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 4rem;
+    @include breakpoint($size-sm, true) {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+    @include breakpoint($size-lg) {
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+    @include breakpoint($size-xl) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}

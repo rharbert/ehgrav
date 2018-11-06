@@ -1,0 +1,250 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Paragraph Text-Image  (component)
+////////////////////////////////////////////////////////////////////////////////
+
+.paragraph--type--text-image {
+  h1, h2, h3, h4, p, ol, ul {
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  .image {
+//    margin-bottom: 1.5rem;
+  }
+  &.image__center .image {
+//    margin: 0 auto 1.5rem auto;
+    margin: 0 auto;
+  }
+  &.image__md .image {
+    max-width: 560px;
+  }
+  &.image__sm .image {
+    max-width: 420px;
+  }
+  &.image__xs .image {
+    max-width: 270px;
+  }
+  @include breakpoint($size-sm-plus, true) {
+    ////////////////////////////////////////////////////////////////////////////
+    // X-Small Image
+    ////////////////////////////////////////////////////////////////////////////
+    &.image__xs {
+      .image {
+      }
+      .image__left,
+      .image__right {
+        width: 25%; // Match .image width with .image_nowrap width
+        margin-bottom: 1.5rem;
+      }
+      &.image__left {
+        .image {
+          width: 25%; // Match .image width with .image_nowrap width
+          float: left; // Match .image-float-left with image size and breakpoint
+          padding-right: 1.5rem;
+        }
+        &.image__nowrap .body {
+          width: 75%; // Match .image_nowrap width with .image width
+          float: right;
+        }
+      }
+      &.image__right {
+        .image {
+          width: 25%; // Match .image width with .image_nowrap width
+          float: right; // Match .image-float-left with image size and breakpoint
+          padding-left: 1.5rem;
+        }
+        &.image_nowrap .body {
+          width: 75%; // Match .image_nowrap width with .image width
+          float: left;
+        }
+      }
+    }
+    ////////////////////////////////////////////////////////////////////////////
+    // Small Image
+    ////////////////////////////////////////////////////////////////////////////
+    &.image__sm {
+      .image {
+      }
+      .image__left,
+      .image__right {
+        width: 33%; // Match .image width with .image_nowrap width
+        margin-bottom: 1.5rem;
+      }
+      &.image__left {
+        .image {
+          width: 33%; // Match .image width with .image_nowrap width
+          float: left; // Match .image-float-left with image size and breakpoint
+          padding-right: 1.5rem;
+        }
+        &.image_nowrap .body {
+          width: 67%; // Match .image_nowrap width with .image width
+          float: right;
+        }
+      }
+      &.image__right {
+        .image {
+          width: 33%; // Match .image width with .image_nowrap width
+          float: right; // Match .image-float-left with image size and breakpoint
+          padding-left: 1.5rem;
+        }
+        &.image_nowrap .body {
+          width: 67%; // Match .image_nowrap width with .image width
+          float: left;
+        }
+      }
+    }
+    ////////////////////////////////////////////////////////////////////////////
+    // Medium Image
+    ////////////////////////////////////////////////////////////////////////////
+    &.image__md {
+      .image {
+      }
+      .image__left,
+      .image__right {
+        width: 53%; // Match .image width with .image_nowrap width
+        margin-bottom: 1.5rem;
+      }
+      &.image__left {
+        .image {
+          width: 53%; // Match .image width with .image_nowrap width
+          float: left; // Match .image-float-left with image size and breakpoint
+          padding-right: 1.5rem;
+        }
+        &.image_nowrap .body {
+          width: 47%; // Match .image_nowrap width with .image width
+          float: right;
+        }
+      }
+      &.image__right {
+        .image {
+          width: 53%; // Match .image width with .image_nowrap width
+          float: right; // Match .image-float-left with image size and breakpoint
+          padding-left: 1.5rem;
+        }
+        &.image_nowrap .body {
+          width: 47%; // Match .image_nowrap width with .image width
+          float: left;
+        }
+      }
+    }
+  }
+  @include breakpoint($size-lg, true) {
+    ////////////////////////////////////////////////////////////////////////////
+    // Large Image
+    ////////////////////////////////////////////////////////////////////////////
+    &.image__lg {
+      .image {
+        max-width: 800px;
+        margin-bottom: 2.25rem;
+      }
+      .image__left,
+      .image__right {
+        width: 65%; // Match .image width with .image_nowrap width
+      }
+      &.image__left {
+        .image {
+          width: 65%; // Match .image width with .image_nowrap width
+          float: left; // Match .image-float-left with image size and breakpoint
+          padding-right: 1.5rem;
+        }
+        &.image_nowrap .body {
+          width: 30%; // Match .image_nowrap width with .image width
+          float: right;
+        }
+      }
+      &.image__right {
+        .image {
+          width: 65%; // Match .image width with .image_nowrap width
+          float: right; // Match .image-float-left with image size and breakpoint
+          padding-left: 1.5rem;
+        }
+        &.image_nowrap .body {
+          width: 30%; // Match .image_nowrap width with .image width
+          float: left;
+        }
+      }
+    }
+    ////////////////////////////////////////////////////////////////////////////
+    // X-Large Image
+    ////////////////////////////////////////////////////////////////////////////
+    &.image__xl {
+      .image {
+        margin-bottom: 2.25rem;
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Images Padding
+////////////////////////////////////////////////////////////////////////////////
+
+$mp_xxs_px: 5px;
+$mp_xxs_rem: .3125rem;
+$mp_xs_px: 16px;
+$mp_xs_rem: 1rem;
+$mp_sm_px: 32px;
+$mp_sm_rem: 2rem;
+$mp_md_px: 48px;
+$mp_md_rem: 3rem;
+$mp_lg_px: 64px;
+$mp_lg_rem: 4rem;
+$mp_xl_px: 80px;
+$mp_xl_rem: 5rem;
+
+// XXS
+.images-padding__xxs .paragraph--type--text-image {
+  padding: $mp_xxs_px;
+  padding: $mp_xxs_rem;
+}
+// XS
+.images-padding__xs .paragraph--type--text-image {
+  padding: $mp_xs_px;
+  padding: $mp_xs_rem;
+}
+// SM
+.images-padding__sm .paragraph--type--text-image {
+  padding: $mp_sm_px;
+  padding: $mp_sm_rem;
+}
+// MD
+.images-padding__md .paragraph--type--text-image {
+  padding: $mp_md_px;
+  padding: $mp_md_rem;
+}
+// LG
+.images-padding__lg .paragraph--type--text-image {
+  padding: $mp_lg_px;
+  padding: $mp_lg_rem;
+}
+// XL
+.images-padding__xl .paragraph--type--text-image {
+  padding: $mp_xl_px;
+  padding: $mp_xl_rem;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Images Size (Multiple Image Paragraphs for their single Parent Selector)
+////////////////////////////////////////////////////////////////////////////////
+
+// XS
+.images-size__xs .image {
+  max-width: 270px;
+}
+// SM
+.images-size__sm .image {
+  max-width: 420px;
+}
+// MD
+.images-size__md .image {
+  max-width: 560px;
+}
+// LG
+.images-size__lg .image {
+  max-width: 800px;
+}

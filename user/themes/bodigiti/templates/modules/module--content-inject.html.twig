@@ -1,0 +1,44 @@
+
+  {##
+   # Content-Inject Module Type
+   #}
+
+  {# set empty variable #}
+  {% set styleSelect = [] %}
+  {# add results to variable to be included below in 'classes' as 'styleSelect' #}
+  {% for s in mlist.module_styles__select_child %} {% set styleSelect = styleSelect|merge([s]) %} {% endfor %}
+  {# output results of above directly into the <div for class="" with a for loop #}
+
+  {% set classes = [
+    'col paragraph ',
+    'paragraph--type--content-inject ',
+     mlist.module_styles__text_child ? mlist.module_styles__text_child ~ ' ',
+    'clearfix',
+    ]
+  %}
+
+  {# Content-Inject? #}
+  {% set content_inject__type = mlist.content_inject__type %}
+  {% set content_inject__url = mlist.content_inject__url %}
+  {# End Content-Inject? #}
+
+  <div class="{% for class in classes %}{{ class }}{% endfor %}{% for s in styleSelect %} {{ s }}{% endfor %}">
+    <div class="inner">
+    {# Content Inject #}
+      <div class="content-wrapper">
+        {# Include Page by URL reference ~ content_inject__url #}
+        {% if content_inject__type == 'modules' %}
+          {% include 'modules/modules.html.twig' with {'page': page.find(content_inject__url)} %}
+        {% elseif content_inject__type == 'product' %}
+          {% include 'shop/product-info.html.twig' with {'page': page.find(content_inject__url)} %}
+        {% elseif content_inject__type == 'shop' %}
+          {% include 'shop.html.twig' with {'page': page.find(content_inject__url)} %}
+        {% endif %}
+        {# End Include #}
+      </div>
+    </div>
+  </div>
+
+  {##
+   # End Content-Inject Module Type
+   #}

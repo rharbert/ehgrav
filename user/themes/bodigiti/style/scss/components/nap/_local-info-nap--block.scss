@@ -1,0 +1,35 @@
+//////////////////////////////////
+// Local Info: NAP ETC
+//////////////////////////////////
+#local-info-nap-etc {
+  clear: both;
+  margin: 2rem 0 3rem 0;
+  .nap-pipe-break,
+  .nap-logo {
+    display: none;
+  }
+  @include breakpoint($size-md, true) {
+    margin: 3rem 0 3rem 0;
+    .nap-pipe-break {
+      display: inline-block;
+    }
+    .nap-name,
+    .nap-phone,
+    .nap-zip {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+    .nap-city-state,
+    .nap-full-address {
+      display: inline-block;
+    }
+    .nap-street,
+    .nap-pipe-break {
+      display: inline-block;
+      margin-right: .5rem;
+    }
+  }
+  @include breakpoint($size-lg, true) {
+    margin: 1.5rem 0 0 0;
+  }
+}

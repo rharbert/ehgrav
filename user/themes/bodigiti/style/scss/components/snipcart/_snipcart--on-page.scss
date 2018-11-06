@@ -1,0 +1,87 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Snipcart on-page snipcart-related (snipcart component)
+////////////////////////////////////////////////////////////////////////////////
+
+#snipcart-wrapper {
+  height: 48px;
+  height: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 700;
+  &:hover {
+    text-decoration: none;
+    // background-color: $color3;
+    // background-color: rgba(0, 0, 0, 0.8);
+  }
+  &.cart-not-empty {
+    // background-color: $color3;
+    // background-color: rgba(0, 0, 0, 0.8);
+  }
+  @include breakpoint($size-lg) {
+    padding-left: 1rem;
+  }
+  @include breakpoint($size-2x) {
+    margin: 7.75rem 28rem 0 0;
+  }
+}
+//
+// Account/Login
+//
+.snipcart-account-login {
+  float: left;
+  height: 100%;
+  margin-right: 16px;
+  margin-right: .5rem;
+  a {
+    color: $color4;
+    @include font-size($font-base);
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+      color: $color4;
+    }
+  }
+  .snipcart-user-email {
+    font-weight: $font-weight-regular;
+    height: 100%;
+    padding-top: 12px;
+    padding-top: .75rem;
+  }
+}
+//
+// Button: Cart & Cart Items Count
+//
+.snipcart-cart-and-count {
+  font-weight: $font-weight-regular;
+  float: left;
+  height: 100%;
+  width: 130px;
+  width: 8.125rem;
+  a {
+    text-decoration: none;
+    @include font-size($font-base);
+  }
+  .snipcart-cart {
+    //
+    // Before applying Background, set height 100% so background is visible
+    //
+    height: 100%;
+    // Background
+    background: url(../../images/shopping-cart-red.svg);
+    background-repeat: no-repeat;
+    background-size: 32px auto;
+    background-size: 2rem auto;
+    // First value is x-position (horizontal), second is y-value (vertical)
+    background-position: 15px center;
+  }
+  .snipcart-summary {
+    color: $color4;
+    height: 100%;
+    float: right;
+    padding-top: 12px;
+    padding-top: .75rem;
+    padding-right: 15px;
+  }
+}

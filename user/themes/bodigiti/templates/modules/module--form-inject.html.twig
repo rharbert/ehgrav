@@ -1,0 +1,39 @@
+
+  {##
+   # Form-Inject Module Type
+   #}
+
+  {# set empty variable #}
+  {% set styleSelect = [] %}
+  {# add results to variable to be included below in 'classes' as 'styleSelect' #}
+  {% for s in mlist.module_styles__select_child %} {% set styleSelect = styleSelect|merge([s]) %} {% endfor %}
+  {# output results of above directly into the <div for class="" with a for loop #}
+
+  {% set classes = [
+    'col paragraph ',
+    'paragraph--type--form-inject ',
+     mlist.module_styles__text_child ? mlist.module_styles__text_child ~ ' ',
+    'clearfix',
+    ]
+  %}
+
+  {# Form-Inject? #}
+  {% set form_inject = mlist.form_inject__url %}
+  {# End Form-Inject? #}
+
+  {% if form_inject %}
+  <div class="{% for class in classes %}{{ class }}{% endfor %}{% for s in styleSelect %} {{ s }}{% endfor %}">
+    <div class="inner">
+    {# Form Inject #}
+      <div class="form-wrapper">
+        {# forms/form.html.twig uses form plugin template which is set to use
+          forms/default/form.html.twig which is overwritten in bodigiti them
+          in forms/default/form.html.twig #}
+        {% include "forms/form.html.twig" with {form: forms(  {route: form_inject  }  ) } %}
+      </div>
+    </div>
+  </div>
+  {% endif %}{# End Form Inject #}
+  {##
+   # End Form-Inject Module Type
+   #}

@@ -1,0 +1,43 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Button (component): Override _button--base.scss
+////////////////////////////////////////////////////////////////////////////////
+
+a.button {
+  // Font Color
+  &.font-black {
+    color: $color1;
+  }
+  &.font-white {
+    color: $color2;
+  }
+  &.font-primary {
+    color: $color3;
+  }
+  &.font-secondary {
+    color: $color3;
+  }
+  // Background Color
+  &.background-black {
+    background: $color1;
+  }
+  &.background-white {
+    background: $color2;
+  }
+  &.background-primary {
+    background: $color3;
+  }
+  &.background-secondary {
+    background: $color4;
+  }
+  // Font Weight
+  &.font-weight-regular {
+    font-weight: $font-weight-regular;
+  }
+  // Text Decoration
+  &.decoration-none {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

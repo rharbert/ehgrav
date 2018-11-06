@@ -1,0 +1,22 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Paragraphs All (component)
+////////////////////////////////////////////////////////////////////////////////
+
+.paragraph__callout {
+  // Disable anchor underlines or it underlines all text
+  a.paragraph--link {
+    text-decoration: none;
+    // display block and height 100% so link expands to full contents
+    display: block;
+    height: 100%;
+    &:hover {
+      opacity: .8;
+    }
+  }
+  // use inline for when you want to underline hovered text that is inside of
+  // .paragraph-callout which is set to text-decoration: none
+  .text-cta:hover {
+    text-decoration: underline;
+  }
+}

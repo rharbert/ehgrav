@@ -1,0 +1,16 @@
+title: 'Drawings of Alice Magolo | Shop Prints, T-Shirts and Stickers'
+default_lang: en
+author:
+  name: author
+  email: rachael@bodigiti.com
+taxonomies:
+  - category
+metadata:
+  description: 'The drawings of Alice Margolo features her original drawings. Purchase affordable prints, t-shirts, and stickers with her designs.'
+summary:
+  enabled: false
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /blog

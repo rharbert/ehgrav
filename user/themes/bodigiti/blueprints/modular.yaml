@@ -1,0 +1,33 @@
+title: modular
+'@extends':
+    type: modular
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+####### Start Content
+        content:
+          fields:
+            header.title:
+              type: text
+              toggleable: true
+              label: Title (optional for Modular page)
+            content:
+              unset@: true
+            # Prevent Modular page from hijacking the main menu
+            # Force default to "0" does the trick
+            header.onpage_menu:
+              type: toggle
+              toggleable: true
+              label: Onpage Menu
+              help: PLUGIN_ADMIN.PUBLISHED_HELP
+              highlight: 1
+              size: medium
+              options:
+                1: PLUGIN_ADMIN.YES
+                0: PLUGIN_ADMIN.NO
+              default: 0
+              validate:
+                type: bool

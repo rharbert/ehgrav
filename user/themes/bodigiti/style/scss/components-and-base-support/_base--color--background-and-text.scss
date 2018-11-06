@@ -1,0 +1,85 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Background & Text Colors (base-and-component-support)
+////////////////////////////////////////////////////////////////////////////////
+
+//
+// Background Colors
+//
+.background {
+  &.dark,
+  &.black,
+  &__1 {
+    background-color: $color1;
+  }
+  &.white,
+  &__2 {
+    background-color: $color2;
+  }
+  &__3 {
+    background-color: $color3;
+  }
+  &.red,
+  &__4 {
+    background-color: $color4;
+  }
+  // &__5 {
+  //   background-color: $color5;
+  // }
+  // &.brown,
+  // &__6 {
+  //   background-color: $color6;
+  // }
+  &__gray1 {
+    background-color: $gray1;
+  }
+  &__gray2 {
+    background-color: $gray2;
+  }
+  &__gray3 {
+    background-color: $gray3;
+  }
+  &__gray4 {
+    background-color: $gray4;
+  }
+  &__gray5 {
+    background-color: $gray5;
+  }
+  &__gray6 {
+    background-color: $gray6;
+  }
+  &__gray7 {
+    background-color: $gray7;
+  }
+  &__gray8 {
+    background-color: $gray8;
+  }
+  &__gray9 {
+    background-color: $gray9;
+  }
+  &__gray10 {
+    background-color: $gray10;
+  }
+  &__gray11 {
+    background-color: $gray11;
+  }
+  &__gray12 {
+    background-color: $gray12;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Text Colors Overrides for when parent such as module/paragraph
+////////////////////////////////////////////////////////////////////////////////
+
+.text-color {
+  &__white {
+    h1,h2,h3,h4,h5,h6,p,ul,ol,li,a {
+      color: $color2;
+    }
+  }
+  &__red,
+    h1,h2,h3,h4,h5,h6,p,ul,ol,li,a {
+      color: $color4;
+  }
+}

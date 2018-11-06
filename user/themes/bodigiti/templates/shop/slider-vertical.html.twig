@@ -1,0 +1,19 @@
+
+{##
+ # Slider vertical (lightslider) + No zoom elements
+ #}
+<section class="product-group__image">
+  <div id="lightslider-wrapper" class="vertical lightslider-product">
+    <ul id="lightSlider" class="list-unstyled">
+      {% for slide in page.header.slideshow %}
+        {# Thumb: Get Image and Crop #}
+        {% set imageThumb = page.media.images[slide.image].cropZoom(180,180) %}
+        {# Thumb: URL #}
+        {% set image_data_thumb = 'data-thumb=\"'~imageThumb.url~'\"' %}
+        <li {{ image_data_thumb }}>
+          {{ page.media.images[slide.image].html('', slide.alt, 'img-responsive lazy zoom imagezoom main-slider-item') }}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

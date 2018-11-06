@@ -1,0 +1,34 @@
+<header class="header clearfix" role="banner">
+    <section class="u-container-lg {{ grid_size }}">
+        <section class="header-inner">
+          <section class="hamburger-and-cart">
+            <a href="#" class="hamburger u-visible-mobile js-toggle-menu">
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+            </a>
+            {% block header_login_and_cart %}
+                {% include 'shop/cart.html.twig' %}
+            {% endblock %}
+          </section>
+          <nav class="logo-and-nav menu-default">
+              <section class="logo">
+                <a href="{{ home_url }}" class="navbar-brand mr-10 text-decoration--none">
+                <p style="margin-bottom: 0;">The drawings of</p>
+                <img src="/user/themes/bodigiti/images/logo-alice-draws-black.png"/>
+                </a>
+              <section>
+
+            {% block header_navigation %}
+              <ul class="menu-list">
+                {% include 'partials/navigation.html.twig' %}
+              </ul>
+            {% endblock %}
+          </nav>
+          {% if config.plugins.login.enabled and grav.user.username %}
+            <span class="login-status-wrapper"><i class="fa fa-user"></i> {% include 'partials/login-status.html.twig' %}</span>
+          {% endif %}
+        </section>
+    </section>
+
+</header>

@@ -1,0 +1,29 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Responsive Breakpoints
+////////////////////////////////////////////////////////////////////////////////
+
+$size-xs: 480px !default;
+$size-sm: 600px !default;
+$size-sm-plus: 768px !default;
+$size-md: 840px !default;
+$size-lg: 960px !default;
+$size-xl: 1200px !default;
+$size-2x: 1440px !default;
+$sidebar-one: 25em; // 25em or 400px
+
+////////////////////////////////////////////////////////////////////////////////
+// Rows
+////////////////////////////////////////////////////////////////////////////////
+
+$row: 68rem; // 68rem or 1,088px
+$row-xl: 90rem; // 90rem or 1,440px
+$row-lg: 75rem; // 75rem or 1,200px
+$row-sm: 52rem; // 50em or 800px
+$row-xs: 34rem; // 24em or 544px
+
+@mixin row { max-width: $row; margin-left: auto; margin-right: auto; }
+@mixin row-xl { max-width: $row-xl; margin-left: auto; margin-right: auto; }
+@mixin row-lg { max-width: $row-lg; margin-left: auto; margin-right: auto; }
+@mixin row-sm { max-width: $row-sm; margin-left: auto; margin-right: auto; }
+@mixin row-xs { max-width: $row-xs; margin-left: auto; margin-right: auto; }

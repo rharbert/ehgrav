@@ -1,0 +1,27 @@
+title: Features
+'@extends': partials/modular-basic
+
+form:
+  fields:
+    tabs:
+      fields:
+        features:
+          ordering@: 1
+          type: tab
+          title: Features
+          fields:
+            header.features:
+              name: features
+              type: list
+              label: Features
+
+              fields:
+                .icon:
+                  type: iconpicker
+                  label: Icon
+                .header:
+                  type: text
+                  label: Header
+                .text:
+                  type: text
+                  label: Text

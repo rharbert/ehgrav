@@ -1,0 +1,68 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Paragraph Featured Content (component)
+////////////////////////////////////////////////////////////////////////////////
+
+.paragraph--featured-content {
+  @include row-sm;
+  margin-top: 28px;
+  margin-top: 1.75rem;
+  @include breakpoint($size-sm-plus, true) {
+    display: flex;
+  }
+  a,
+  a:hover {
+    text-decoration: none;
+  }
+  a:hover {
+    opacity: .7;
+  }
+  .featured-text {
+    height: 100%;
+    padding: 1.4rem 1.4rem 0rem 1.4rem;
+    /* Set font-color and font-weight for all text styles */
+    .text-summary,
+    .text-title,
+    .text-cta {
+      color: $color2;
+      font-weight: $font-weight-regular;
+    }
+    .text-title {
+      @include font-size($font-medium-large);
+      padding-bottom: .5rem;
+    }
+    .text-summary {
+      @include font-size($font-small);
+      padding: 0 0 1.25rem 0;
+    }
+    .text-cta {
+      @include font-size($font-small);
+      text-decoration: underline;
+      padding: 0 0 1.25rem 0;
+    }
+    /* "SM-PLUS" breakpiont introduced for Featured Text float left and add additional style rules */
+    @include breakpoint($size-sm-plus, true) {
+      @include span(6 at 1 of 10);
+      .text-title {
+        @include font-size($font-large2);
+        padding-bottom: 1.25rem;
+      }
+      .text-summary {
+        @include font-size($font-standard);
+      }
+    }
+    /* "MED" breakpoint */
+    @include breakpoint($size-md, true) {
+      padding: 3rem 1.5rem 0rem 2rem;
+    }
+  }
+  .featured-image {
+    /* @breakpoint Featured Image float right */
+    @include breakpoint($size-sm-plus, true) {
+      @include span(4 at 7 of 10);
+    }
+    img {
+      display: block;
+    }
+  }
+}

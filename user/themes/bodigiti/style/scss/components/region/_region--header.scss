@@ -1,0 +1,66 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Header (region component)
+////////////////////////////////////////////////////////////////////////////////
+
+.header {
+  border-bottom: none;
+  font-weight: $font-weight-light;
+  width: 100%;
+  // margin-bottom: 0.75rem;
+  @include breakpoint($size-lg) {
+    padding-top: 1.5rem;
+    // margin-bottom: 1.5rem;
+  }
+  .header-inner {
+    nav {
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+  }
+  .hamburger-and-cart {
+    background: $color3;
+    height: 3rem;
+    padding-bottom: .75rem;
+    @include breakpoint($size-lg) {
+      background: none;
+      float: right;
+      height: 0;
+      padding: 0;
+    }
+    @include breakpoint($size-2x) {
+      background: none;
+      float: none;
+    }
+  }
+  .hamburger {
+    padding: .9rem;
+    @include breakpoint($size-lg) {
+      display: none;
+    }
+  }
+  .hamburger-inner {
+    @include breakpoint($size-lg) {
+      display: none;
+    }
+  }
+  .hamburger.is-active ~ .logo-and-nav {
+    margin-top: 2.8em;
+  }
+}
+.header-transparent .header:not(.scrolled) {
+    background: none;
+}
+
+section.logo {
+  margin: 0 auto 1rem auto;
+  text-align: center;
+}
+section.logo img {
+  max-width: 90%;
+}
+section.logo p {
+  @include breakpoint($size-lg) {
+    margin-top: 0;
+  }
+}

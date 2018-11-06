@@ -1,0 +1,65 @@
+
+//
+// Font Family
+//
+$font-family-menus: 'Poppins', Arial, Helvetica, sans-serif;
+$font-family-headings: 'Poppins', Arial, Helvetica, sans-serif;
+$font-family-main: 'Poppins', Arial, Helvetica, sans-serif;
+
+//
+// Font Weight
+//
+$font-weight-light: 200;
+$font-weight-regular: 300;
+$font-weight-medium: 400;
+$font-weight-bold: 700;
+
+//
+// Font Size + Line Height
+//
+$font-factor: 1.10;
+$font-tiny: 9.008 * $font-factor; // 9.008px or 0.563rem (at font-factor 1.0 )
+$font-tiny-plus: 12 * $font-factor; // 12px or 0.75rem (at font-factor 1.0 )
+$font-smaller: 14 * $font-factor; // 12px or 0.75rem (at font-factor 1.0 )
+$font-small: 15 * $font-factor; // 15px or 0.9375rem (at font-factor 1.0 )
+$font-base: 16 * $font-factor; // 16px or 1rem (at font-factor 1.0 )
+$font-base-plus: 17 * $font-factor; // 17px or 1.0625rem (at font-factor 1.0 )
+$font-standard: 19 * $font-factor; // 19px or 1.1875rem (at font-factor 1.0 )
+$font-medium: 21 * $font-factor; // 21px or 1.3125rem (at font-factor 1.0 )
+$font-medium-large: 24 * $font-factor; // 24px or 1.5rem (at font-factor 1.0 )
+$font-large: 28 * $font-factor; // 28px or 1.75rem (at font-factor 1.0 )
+$font-large2: 34 * $font-factor; // 34px or 2.125rem (at font-factor 1.0 )
+$font-large3: 36 * $font-factor; // 36px or 2.25rem (at font-factor 1.0 )
+$font-xlarge: 37.904 * $font-factor; // 37.904px 2.369rem (at font-factor 1.0 )
+$font-xxlarge: 40 * $font-factor; // 40px or 2.5rem (at font-factor 1.0 )
+$font-jumbo: 56 * $font-factor; // 56px or 3.5rem (at font-factor 1.0 )
+
+//
+// Line Height
+//
+$line-height-1: 16; // 1.0rem
+$line-height-2: 20; // 1.25rem
+$line-height-3: 24; // 1.5rem
+$line-height-4: 30; // 1.875rem
+$line-height-4a: 32; // 2.0rem
+$line-height-5: 36; // 2.25rem
+$line-height-6: 40; // 40px or 2.5rem
+$line-height-6a: 44; // 44px or 2.75rem
+$line-height-7: 48; // 48px or 3rem
+
+@mixin font-size-only($sizeValue: $font-size) {
+  font-size: ($sizeValue) + px;
+  font-size: ($sizeValue / 16) + rem;
+}
+
+@mixin line-height($line: $line-height) {
+  line-height: ($line) + px;
+  line-height: ($line / 16) + rem;
+}
+
+@mixin font-size($sizeValue: $font-size, $line: $sizeValue * 1.5) {
+  font-size: ($sizeValue) + px;
+  line-height: ($line) + px;
+  font-size: ($sizeValue / 16) + rem;
+  line-height: ($line / 16) + rem;
+}

@@ -1,0 +1,16 @@
+
+// Position arrro set middle-bottom 
+.slick--optionset--x-main-controls .slick__arrow {
+  left: 50%;
+  margin: 0 0 0 -90px;
+  top: auto;
+  width: 180px;
+  height: 40px;
+  bottom: 1px;
+}
+
+// Prev/Next Color
+.slick-arrow:before {
+  color: $gray9;
+}
+

@@ -1,0 +1,27 @@
+
+.pager {
+  list-style-type: none;
+  li {
+    color: $color2;
+    background-color: $color3;
+    display: inline-block; 
+    &.pager-current {
+      background-color: $color2;
+      color: $color3;
+      padding: .75em 1.25em;
+      &:hover {
+        background-color: $color2;
+      }
+    }
+    &:hover {
+      background-color: $color8;
+    }
+  }
+  a {
+    color: $color2;
+    text-decoration: none;
+    display: block;
+    padding: .75em 1.25em;
+  }
+}
+

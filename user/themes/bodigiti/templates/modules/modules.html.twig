@@ -1,0 +1,60 @@
+
+{##
+ # Modules
+ #}
+
+{% for m in page.header.module %}
+
+  {# set empty variable #}
+  {% set styleSelect = [] %}
+  {# add results to variable to be included below in 'classes' as 'styleSelect' #}
+  {% for s in m.module_styles__select %} {% set styleSelect = styleSelect|merge([s]) %} {% endfor %}
+  {# output results of above directly into the <div for class="" with a for loop #}
+
+  {# Isotope Grid Check #}
+  {% set mIsotope = m.module_isotope %}
+  {# End Isotope Grid Check #}
+
+  {% set classes = [
+    'columns ',
+    mIsotope == 1 ? 'grid-isotope ',
+     m.module_styles__text ? m.module_styles__text ~ ' ',
+    'clearfix',
+    ]
+  %}
+
+ {# Using Spectre flexbox responsive grid requires 'columns' class be directly
+  applied to parent div of the child column classes so 'display: flex' is applied
+  to parent of 'column' #}
+  <div class="{% for class in classes %}{{ class }}{% endfor %}{% for s in styleSelect %} {{ s }}{% endfor %}">
+    {# wrapping the below in block allows variable from this template to be available
+    in variables of the included child templates.  First did this for 'isotope' variable #}
+    {% block module %}
+      {% if mIsotope == 1 %}
+        <div class="grid-sizer"></div>
+        {% set mIsotope = true %}
+      {% endif %}
+      {% set mPublished = m.module_published %}
+      {% if mPublished == 1 %}
+
+        {% for mlist in m.module_list %}
+          {# Must first assign m.module_type to variable #}
+          {% set mType = mlist.module_type %}
+
+            {# Modules #}
+            {% if mType == 'module__text_image' %}
+              {% include 'modules/module--text-image.html.twig' %}
+            {% elseif mType == 'module__content_inject' %}
+              {% include 'modules/module--content-inject.html.twig' %}
+            {% elseif mType == 'module__form_inject' %}
+              {% include 'modules/module--form-inject.html.twig' %}
+            {% endif %}{# End Modules #}
+        {% endfor %} {# End 'for mlist' #}
+
+      {% endif %}{# End if Published #}
+    {% endblock %}
+  </div> {# End div 'Columns' #}
+{% endfor %} {# End 'for m' #}
+{##
+ # End Modules
+ #}

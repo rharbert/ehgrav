@@ -1,0 +1,9 @@
+
+/* Button Styles for yaml description markup of admin 'Styles' field */
+form .tags_select button {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+  padding: 1px 7px 2px;
+}

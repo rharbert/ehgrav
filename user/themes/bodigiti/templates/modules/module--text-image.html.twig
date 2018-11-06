@@ -1,0 +1,80 @@
+
+  {##
+   # Text-Image Module Type
+   #}
+
+  {# set empty variable #}
+  {% set styleSelect = [] %}
+  {# add results to variable to be included below in 'classes' as 'styleSelect' #}
+  {% for s in mlist.module_styles__select_child %} {% set styleSelect = styleSelect|merge([s]) %} {% endfor %}
+  {# output results of above directly into the <div for class="" with a for loop #}
+
+  {# below mIsotope variable is from parent template, passed down by parent template by
+  wrapping module includes with % block % #}
+  {% set classes = [
+    'col paragraph ',
+     mIsotope ? 'grid-item ',
+    'paragraph--type--text-image ',
+     mlist.module_styles__text_child ? mlist.module_styles__text_child ~ ' ',
+    'clearfix',
+    ]
+  %}
+
+  {# Link for Module #}
+
+  {% set linkType = mlist.text_image__link_type %}
+  {% if linkType == 'image' %}
+    {% set linkImage = mlist.text_image__link %}
+  {% elseif linkType == 'module' %}
+    {% set linkModule = mlist.text_image__link %}
+  {% endif %}
+  {# End Link for Module #}
+
+  <div class="{% for class in classes %}{{ class }}{% endfor %}{% for s in styleSelect %} {{ s }}{% endfor %}">
+  {# Link Wrap Module (nested links break anchors, so if module contains anchor
+  wrap, then do not use anchors in remainder of module, such as in textarea) #}
+  {% if linkType == 'module' %}<a href="{{ linkModule }}" class="paragraph--link">{% endif %}
+    <div class="inner">
+    {# Title #}
+    {% if mlist.text_image__title %}
+      <div class="title">{{ mlist.text_image__title|markdown }}</div>
+    {% endif %} {# end title #}
+    {# Subtitle #}
+    {% if mlist.text_image__subtitle %}
+      <div class="subtitle">{{ mlist.text_image__subtitle|markdown }}</div>
+    {% endif %} {# end subtitle #}
+    {# Image #}
+    {% if mlist.text_image__image %}
+        <figure class="image">
+        {% if linkType == 'image' %}
+          <a href="{{ linkImage }}" class="paragraph--link--image">
+        {% endif %}
+      {# end link part 1 of 2 #}
+      {# Responsive Images: Right now, only src being applied by resize-images plugin
+         and the 'sizes' attribute with breakspoints is not being used.
+         --> Relies on CSS to set max-width #}
+      {{ page.media.images[mlist.text_image__image].html('', mlist.text_image__alt) }}
+      {# Link for Image #}
+        {% if linkType == 'image' %}
+          </a>
+        {% endif %}
+        {# end link part 2 of 2 #}
+      {# Image/Caption #}
+      {% if mlist.text_image__caption %}
+        {# |stiptags(' .. ')|raw -Will remove all tags except those entered #}
+        <figcaption>{{ mlist.text_image__caption|markdown|striptags('<a><h1><h2><h3><h4><h5><h6><strong><b><i><em><mark><sub><sup>')|raw }}</figcaption>
+      {% endif %} {# end image/caption #}
+    {% endif %} {# end image #}
+    </figure>
+    {# Body #}
+    {% if mlist.text_image__textarea %}
+      <div class="body">
+        {{ mlist.text_image__textarea|markdown }}
+      </div>
+    {% endif %} {# end body #}
+    </div> {# end 'inner' #}
+    {% if linkType == 'module' %}</a>{% endif %}{# End Link Wrap Module #}
+  </div> {# End 'module/paragraph' #}
+  {##
+   # End Text-Image Module Type
+   #}

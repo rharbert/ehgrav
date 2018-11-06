@@ -1,0 +1,37 @@
+<head>
+{% block head %}
+  <meta charset="utf-8" />
+  <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#231F20"/><!-- Mobile Chrome, Firefox OS and Opera -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  {% include 'partials/metadata.html.twig' %}
+  <link rel="icon" type="image/png" href="{{ url('theme://images/favicon-alice-draws-black.png') }}" />
+  <link rel="canonical" href="{{ page.url(true, true) }}" />
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PD95K5P');</script>
+  <!-- End Google Tag Manager -->
+{# 'Register' CSS and optionally categorize into a group #}
+{# For Additional Styles Rendering see bottom of base.html.twig #}
+{# For JS Rendering see bottom of base.html.twig #}
+{% block stylesheets %}
+  {% do assets.addCss('theme://style/css/styles.css', {group:'top'}) %}
+  {% do assets.addCss('https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css', {group:'snipcart-vendor'}) %}
+  {% do assets.addCss('theme://style/css/snipcart-modal.css', 108) %}
+  {% if browser.getBrowser == 'msie' and browser.getVersion >= 10 %}
+      {% do assets.addCss('theme://style/css/ie10-plus.css') %}
+  {% endif %}
+{% endblock %}
+{# Render Primary Styles.css #}
+{{ assets.css('top') }}
+{% endblock head %}
+{# Google Font: Poppins #}
+<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400" rel="stylesheet">
+{# Google reCaptcha #}
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>

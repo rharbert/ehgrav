@@ -1,0 +1,37 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Paragraphs All (component)
+////////////////////////////////////////////////////////////////////////////////
+
+.paragraph {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  .title h1, .title h2 {
+    color: $color3;
+    margin-bottom: 0;
+  }
+  // '>' selects immediate child only
+  &.title__left > .inner {
+    > .title, > .subtitle { text-align: left; }
+  }
+  &.title__center > .inner {
+    > .title, > .subtitle { text-align: center; }
+  }
+  &.title__right > .inner {
+    > .title, > .subtitle { text-align: right; }
+  }
+  > .inner { margin: 0 auto; }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Percentage Width: Children Paragraphs
+////////////////////////////////////////////////////////////////////////////////
+.paragraphs-width__25 .paragraph {
+  max-width: 25%;
+}
+.paragraphs-width__33 .paragraph {
+  max-width: 33%;
+}
+.paragraphs-width__50 .paragraph {
+  max-width: 50%;
+}

@@ -1,0 +1,66 @@
+################################################################################
+############### Module Text + Image
+form:
+  fields:
+    .text_image__title:
+      type: text
+      label: Title
+      toggleable: true
+    .text_image__subtitle:
+      type: text
+      label: Subtitle
+      toggleable: true
+      description: '<b>Styles Select <u>Title</u> ---> <u>Position:</u> right/center (left is default)</b>'
+
+    .fieldset__text_image__image:
+      type: fieldset
+      title: Image
+      collapsed: true
+      collapsible: true
+      classes: 'module_toggle'
+      fields:
+        .text_image__image:
+          type: filepicker
+          preview_images: true
+          acccept:
+              - .png
+              - .jpg
+              - .gif
+          label: Image
+          description: 'If not specified, this defaults to the first image found in the page''s folder<br><b>Styles Select <u>Image</u> ---> <u>Size:</u> xs/sm/md/lg/xl, <u>Position:</u> right/center/left, <u>Wrap:</u> nowrap</b>'
+          toggleable: true
+        .text_image__alt:
+          type: text
+          label: Alt text
+          toggleable: true
+        .text_image__caption:
+          type: text
+          label: Caption
+          toggleable: true
+
+### Content
+    .text_image__textarea:
+      type: markdown
+      validate:
+        type: textarea
+
+### Link
+    .text_image__link:
+      type: text
+      label: Link
+      toggleable: true
+
+    .text_image__link_type:
+      type: toggle
+      label: Link type to use?
+      toggleable: true
+      default: none
+      description: |
+        <u>Module Link Type</u><br>
+        &nbsp;-Do not manually add anchors inside content area if you select <i>Module</i> link type.<br>
+        &nbsp;-If you want to get certain text to underline on hover, add inline class of <b>'text-cta'</b> (use div or span).<br>
+        &nbsp;-Opacity dims all content on hover when you add class <u>Paragraph Callout</u> using <i>Styles Select</i>.<br>
+      options:
+        none: 'None'
+        image: 'Image'
+        module: 'Module'

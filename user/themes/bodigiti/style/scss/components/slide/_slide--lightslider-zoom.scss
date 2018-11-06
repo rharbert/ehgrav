@@ -1,0 +1,30 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Zoom! (Lightslider Background Images)
+////////////////////////////////////////////////////////////////////////////////
+
+.image-zoom-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.image-zoom-wrap .image-zoom-helper {
+  padding-top: 100%;
+}
+.image-zoom-wrap .image-zoom-handler {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  height: auto;
+  overflow: hidden;
+}
+.image-zoom-wrap img {
+  width: 100%;
+  max-width: inherit;
+}
+.zoom {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+  cursor: url('../../images/zoom-3.cur'),auto;
+}

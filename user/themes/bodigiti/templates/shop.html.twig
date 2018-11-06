@@ -1,0 +1,31 @@
+{% extends 'partials/base.html.twig' %}
+{% set collection = page.collection() %}
+
+{# Layout Class for <body> #}
+{% set body_layout = 'layout-shop' %}
+{% block body_layout %}{{ body_layout }}{% endblock %}
+{# End: Layout Class for <body> #}
+
+
+{% block content %}
+  <section id="main-wrapper">
+    <section id="main">
+      {# Title #}
+      <div class="page-title"><h1>{{ page.title }}</h1></div>
+
+      <main id="main-content">
+
+        {# Shop Navigation Include #}
+        {% include 'shop/navigation.html.twig' %}
+
+        {# Shop-list Include #}
+        <div class="product-teasers clearfix">
+        {% for child in collection %}
+          {% include 'shop/product-teaser.html.twig' with {shop: page, page: child} %}
+        {% endfor %}
+        </div>
+
+      </main>
+    </section>
+  </section>
+{% endblock %}

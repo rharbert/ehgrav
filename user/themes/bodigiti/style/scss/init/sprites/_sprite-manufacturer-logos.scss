@@ -1,0 +1,142 @@
+/*
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+*/
+$freightliner-name: 'freightliner';
+$freightliner-x: 226px;
+$freightliner-y: 192px;
+$freightliner-offset-x: -226px;
+$freightliner-offset-y: -192px;
+$freightliner-width: 350px;
+$freightliner-height: 69px;
+$freightliner-total-width: 690px;
+$freightliner-total-height: 415px;
+$freightliner-image: 'sprite-manufacturer-logos.png';
+$freightliner: (226px, 192px, -226px, -192px, 350px, 69px, 690px, 415px, 'sprite-manufacturer-logos.png', 'freightliner', );
+$isuzu-name: 'isuzu';
+$isuzu-x: 0px;
+$isuzu-y: 192px;
+$isuzu-offset-x: 0px;
+$isuzu-offset-y: -192px;
+$isuzu-width: 226px;
+$isuzu-height: 223px;
+$isuzu-total-width: 690px;
+$isuzu-total-height: 415px;
+$isuzu-image: 'sprite-manufacturer-logos.png';
+$isuzu: (0px, 192px, 0px, -192px, 226px, 223px, 690px, 415px, 'sprite-manufacturer-logos.png', 'isuzu', );
+$sprinter-name: 'sprinter';
+$sprinter-x: 286px;
+$sprinter-y: 0px;
+$sprinter-offset-x: -286px;
+$sprinter-offset-y: 0px;
+$sprinter-width: 404px;
+$sprinter-height: 125px;
+$sprinter-total-width: 690px;
+$sprinter-total-height: 415px;
+$sprinter-image: 'sprite-manufacturer-logos.png';
+$sprinter: (286px, 0px, -286px, 0px, 404px, 125px, 690px, 415px, 'sprite-manufacturer-logos.png', 'sprinter', );
+$volvo-name: 'volvo';
+$volvo-x: 226px;
+$volvo-y: 261px;
+$volvo-offset-x: -226px;
+$volvo-offset-y: -261px;
+$volvo-width: 140px;
+$volvo-height: 140px;
+$volvo-total-width: 690px;
+$volvo-total-height: 415px;
+$volvo-image: 'sprite-manufacturer-logos.png';
+$volvo: (226px, 261px, -226px, -261px, 140px, 140px, 690px, 415px, 'sprite-manufacturer-logos.png', 'volvo', );
+$western-star-name: 'western-star';
+$western-star-x: 0px;
+$western-star-y: 0px;
+$western-star-offset-x: 0px;
+$western-star-offset-y: 0px;
+$western-star-width: 286px;
+$western-star-height: 192px;
+$western-star-total-width: 690px;
+$western-star-total-height: 415px;
+$western-star-image: 'sprite-manufacturer-logos.png';
+$western-star: (0px, 0px, 0px, 0px, 286px, 192px, 690px, 415px, 'sprite-manufacturer-logos.png', 'western-star', );
+$spritesheet-width: 690px;
+$spritesheet-height: 415px;
+$spritesheet-image: 'sprite-manufacturer-logos.png';
+$spritesheet-sprites: ($freightliner, $isuzu, $sprinter, $volvo, $western-star, );
+$spritesheet: (690px, 415px, 'sprite-manufacturer-logos.png', $spritesheet-sprites, );
+
+/*
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+*/
+
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(../../images/#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+*/
+
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{% macro nav_loop(page) %}
+    {% for p in page.children.visible %}
+        {% set active_page = (p.active or p.activeChild) ? 'current-menu-item current_page_item' : '' %}
+        {% if p.children.visible.count > 0 %}
+            <li class="menu-item menu-item-has-children {{ active_page }}">
+                <a href="{{ p.url }}" >{{ p.menu }}<span></span></a>
+                <ul class="sub-menu">
+                    {{ _self.nav_loop(p) }}
+                </ul>
+            </li>
+        {% else %}
+            <li class="menu-item {{ active_page }}">
+                <a href="{{ p.url }}" >{{ p.menu }}<span></span></a>
+            </li>
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{{ _self.nav_loop(pages) }}

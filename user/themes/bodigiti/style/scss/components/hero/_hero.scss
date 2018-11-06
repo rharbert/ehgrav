@@ -1,0 +1,59 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Hero (component)
+////////////////////////////////////////////////////////////////////////////////
+
+.hero {
+  &.hero-xlarge {
+    height: 690px;
+    margin-top: -18rem;
+    @include breakpoint($size-lg) {
+      margin-top: -17rem;
+    }
+    .container {
+      margin-top: 4rem;
+      @include breakpoint($size-lg) {
+        margin-top: 5rem;
+      }
+      h3 {
+        line-height: 1.75rem;
+      }
+    }
+    #to-start {
+      margin-top: 15rem;
+    }
+  }
+  &.hero-tiny {
+    height: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+//
+// Body Selectors
+//
+body.hero-xlarge {
+  .header {
+    margin-bottom: 0;
+  }
+  .hamburger-and-cart,
+  #snipcart-wrapper.cart-not-empty {
+    background: none;
+    background-color: transparent;
+  }
+}
+//
+// Grav Theme Import
+//
+.hero {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+    background-size: cover;
+    background-position: center;
+}

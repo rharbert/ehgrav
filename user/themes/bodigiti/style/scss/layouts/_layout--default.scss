@@ -1,0 +1,82 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Default (Layout)
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// Html, Body
+////////////////////////////////////////////////////////////////////////////////
+
+// Set html and footer background colors to same so when sections in between
+// do not fill the remaining height the footer background color appears to fill
+// the remaining height.
+// This works beause <body> background color is set to 'white' in normalize
+// Required zero 100% height to achieve the goal.
+
+html,
+#footer {
+  @include background-and-text($gray3, $color1);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Mixin Main Padding
+@mixin main-padding {
+  padding-right: 5px;
+  padding-left: 5px;
+  @include breakpoint($size-lg) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  @include breakpoint($size-xl) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Main without Sidebar One
+////////////////////////////////////////////////////////////////////////////////
+.layout-default {
+  //
+  // Main
+  //
+  #main-wrapper {
+    @include row;
+  }
+  #main {
+    // Padding mixin (above)
+    @include main-padding;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Main with Sidebar One
+////////////////////////////////////////////////////////////////////////////////
+.layout-sidebar-one {
+  //
+  // Main
+  //
+  #main {
+    @include row;
+    // Padding mixin (above)
+    @include main-padding;
+  }
+  #main-content {
+    @include breakpoint($size-lg, true) {
+      @include span(8 at 1 of 12);
+      padding: 0;
+    }
+  }
+  //
+  // Sidebar One
+  //
+  #sidebar-one {
+    @include breakpoint($size-lg, true) {
+      @include span(3 at 10 of 12);
+    }
+    @include breakpoint($size-lg, true) {
+      margin: 0;
+      float: right;
+    }
+  }
+}

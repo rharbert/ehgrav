@@ -1,0 +1,37 @@
+
+////////////////////////////////////
+// Card: Contact
+////////////////////////////////////
+
+.card-contact {
+  text-align: center;
+  display: inline-block;
+  border: 1px solid $gray9;
+  padding-bottom: 1rem;
+  // Figure and Caption
+  figure {
+    // Force max-width or when titles/names wrap can cause empty space between image and border
+    border-bottom: 1px solid $gray9;
+    max-width: 240px;
+  }
+  .title {
+    @include font-size-only($font-base-plus);
+    color: $color1;
+    text-transform: uppercase;
+    margin: .75rem 0 .5rem 0;
+  }
+  .subtitle {
+    @include font-size-only($font-base);
+    color: $gray6; // Use $gray1 or $gray6
+    margin: 0 0 1.25rem 0;
+  }
+  .email-icon {
+    background-image: url('/themes/custom/bodigiti/images/email.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.25rem 1.875rem;
+    padding: 0 0 1rem 1.875rem;
+    margin: 0;
+  }
+}
+

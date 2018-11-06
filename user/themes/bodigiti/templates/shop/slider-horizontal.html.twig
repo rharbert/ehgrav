@@ -1,0 +1,22 @@
+
+{##
+ # Slider horizontal (lightslider) + Zoom elements
+ #}
+<section class="product-group__image">
+  <div id="lightslider-wrapper__horizontal" class="lightslider-product">
+    <ul id="lightSlider" class="list-unstyled">
+        {% for slide in page.header.slideshow %}
+          {% set image_data_thumb = 'data-thumb=\"'~page.media.images[slide.image].url~'\"' %}
+          <li {{ image_data_thumb }}>
+            <div class="image-zoom-wrap">
+              <div class="image-zoom-helper">
+                <div class="image-zoom-handler">
+                    {{ page.media.images[slide.image].html('', slide.alt, 'img-responsive lazy zoom imagezoom main-slider-item') }}
+                </div>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+    </ul>
+  </div>
+</section>

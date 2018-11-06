@@ -1,0 +1,8 @@
+{% if page.taxonomy.tag %}
+<span class="tags">
+    {% for tag in page.taxonomy.tag %}
+    {# NEH changed href to page.parent.url so tags would not use root / url but instead /shop/* #}
+    <a class="label label-rounded {{ label_style ?: 'label-secondary' }} p-category" href="{{ page.parent.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}#body-wrapper">{{ tag }}</a>
+    {% endfor %}
+</span>
+{% endif %}

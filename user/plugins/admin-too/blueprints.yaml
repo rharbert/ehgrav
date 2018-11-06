@@ -1,0 +1,31 @@
+name: Admin Too
+version: 0.1.0
+description: Supplement grav's contrib 'admin' plugin
+icon: plug
+author:
+  name: neh
+  email: test@test.com
+homepage: https://github.com/neh/grav-plugin-admin-too
+demo: http://demo.yoursite.com
+keywords: grav, plugin, etc
+bugs: https://github.com/neh/grav-plugin-admin-too/issues
+docs: https://github.com/neh/grav-plugin-admin-too/blob/develop/README.md
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+    text_var:
+      type: text
+      label: Text Variable
+      help: Text to add to the top of a page

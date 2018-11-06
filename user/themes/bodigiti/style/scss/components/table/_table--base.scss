@@ -1,0 +1,28 @@
+
+
+.rwd-table {
+  margin: 1rem 0;
+  width: 100%;
+  td {
+    display: block;
+    border: 1px solid gray;
+  }
+  th, td {
+    text-align: left;
+    padding: .5rem 1rem !important;
+    @include breakpoint($med, true) {
+      display: table-cell;
+    }
+  }
+  .even {
+    background-color: $gray3;
+    @include breakpoint($med, true) {
+    }
+  }
+  &.three-max td {
+    @include breakpoint($med, true) {
+      width: 33%
+    }
+  }
+}
+

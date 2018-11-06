@@ -1,0 +1,45 @@
+
+{% for para in page.header.text_image %}
+  {# Start Paragraph #}
+  {%
+  set classes = [
+  'paragraph ',
+  'paragraph-image-text ',
+  'clearfix',
+  ]
+  %}
+  <div class="{% for class in classes %}{{ class }}{% endfor %}">
+    <div class="inner">
+      {# Title #}
+      {% if para.title %}
+        <div class="title">{{ para.title|markdown }}</div>
+      {% endif %} {# end title #}
+      {% if para.subtitle %}
+        <div class="subtitle">{{ para.subtitle|markdown }}</div>
+      {% endif %} {# end subtitle #}
+      {# Image #}
+      {% if para.image %}
+      <figure class="image">
+        {% if para.link %}
+        <a href="{{ para.link_page }}">
+          {% if para.image %}
+            {{ page.media.images[para.image].resize(400).html('', para.alt) }}
+          {% endif %} {# end image #}
+        </a>
+        {% endif %} {# end link #}
+        {# Image/Caption #}
+        {% if para.caption %}
+          <figcaption>{{ para.caption }}</figcaption>
+        {% endif %} {# end image/caption #}
+      {% endif %} {# end image #}
+      </figure>
+      {# Body #}
+       {% if para.content %}
+         <div class="body">
+           {{ para.content|markdown }}
+         </div>
+       {% endif %} {# end body #}
+    </div>
+  </div>
+  {# END Paragraph #}
+{% endfor %}

@@ -1,0 +1,67 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Menu Header (component)
+////////////////////////////////////////////////////////////////////////////////
+
+header .logo {
+  display: block;
+  // width: 175px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 1rem;
+  @include breakpoint($size-sm) {
+  }
+  @include breakpoint($size-sm-plus) {
+
+  }
+  @include breakpoint($size-md) {
+    width: 90%;
+  }
+  @include breakpoint($size-lg) {
+
+  }
+}
+
+header .menu-list {
+  display: none;
+  @include breakpoint($size-lg) {
+    display: flex;
+    justify-content: center;
+    margin-top: .5rem;
+
+/*
+    > li {
+      padding: .75rem 0;
+      // Set the size of the logo and amount of items
+      list-style-type: none;
+      text-align: center;
+      &:nth-child(4) {
+        margin-left: 18rem;
+      }
+    }
+*/
+    a {
+      // link takes full width of li
+      color: $color3;
+      text-decoration: none;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      // margin-bottom: 1rem;
+      &:hover {
+        // Required to prevent hero image from moving
+        margin-top: -1px;
+        color: $color4;
+        font-weight: bold;
+      }
+    }
+    .logo a:hover {
+      border-bottom: none;
+    }
+  }
+}
+
+.sub-menu {
+  @include breakpoint($size-lg) {
+    display: none;
+  }
+}

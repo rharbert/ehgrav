@@ -1,0 +1,32 @@
+
+{##
+ # Hero
+ #}
+{% set m = page.header %}
+{% if m.hero__visible == true %}
+
+  {% set hero__image = m.hero__image ? page.media.images[m.hero__image] %}
+
+  {% set classes = [
+  'paragraph ',
+  'paragraph--type--hero ',
+   m.hero__size_class != 'none' ? m.hero__size_class ~ ' ',
+   m.hero__classes ? m.hero__classes ~ ' ',
+   m.module_styles__text ? m.module_styles__text ~ ' ',
+  'clearfix',
+  ]
+  %}
+
+  <section id="{{ id }}" class="section hero {% for class in classes %}{{ class }}{% endfor %}{% for s in styleSelect %} {{ s }}{% endfor %}" {% if hero__image %}style="background-image: url({{ hero__image.url }});"{% endif %}>
+    <div class="image-overlay"></div>
+    {% if m.hero__content %}
+    <section class="container {{ grid_size }}" style="text-align: {{ page.header.hero_align|default('center') }}">
+        {{ m.hero__content }}
+    </section>
+    {% endif %}
+    <i id="to-start" class="pulse fa fa-angle-down"></i>
+  </section>
+{% endif %}
+{##
+ # End Hero
+ #}

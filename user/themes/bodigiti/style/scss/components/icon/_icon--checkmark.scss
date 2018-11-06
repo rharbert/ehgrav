@@ -1,0 +1,41 @@
+
+/////////////////////////////////
+// Checkmarks standard 
+/////////////////////////////////
+
+.list-checkmarks ul,
+ul.list-checkmarks {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 .5625rem;
+   li {
+    background-image: url('/themes/custom/bodigiti/images/checkmark-blue.svg');
+    background-repeat: no-repeat;
+    background-position: left .3125rem;
+    background-size: 1.25rem 1.875rem;
+    padding: 0 0 .5rem 1.875rem;
+    margin-bottom: .5rem;
+  }
+}
+
+/////////////////////////////////
+// Checkmarks small
+// only difference is small has line-height property
+/////////////////////////////////
+
+.list-checkmarks .small ul,
+ul.list-checkmarks.small {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 .5625rem;
+   li {
+    background-image: url('/themes/custom/bodigiti/images/checkmark-blue.svg');
+    background-repeat: no-repeat;
+    background-position: left .3125rem;
+    background-size: 1.25rem 1.875rem;
+    padding: 0 0 .5rem 1.875rem;
+    margin-bottom: .5rem;
+    line-height: 1.125rem;
+  }
+}
+

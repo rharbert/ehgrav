@@ -1,0 +1,90 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Contact, Compact, and Webform Forms
+////////////////////////////////////////////////////////////////////////////////
+
+.forms {
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    color: $color3;
+  }
+  .form-label {
+    display: none;
+  }
+  //
+  // Responsivize Form Input Fields
+  //
+  .form-text,
+  .form-textarea,
+  .form-email,
+  .form-select {
+    width: 100%;
+    border: solid 1px $gray1;
+    padding-left: .5rem;
+  }
+  //
+  // Override required so some form elements do not extend 100% of form width
+  //
+  input.button,
+  input[type=date] {
+    width: auto;
+  }
+  //
+  // Labels & Titles: use same font styles + resonsive resize
+  // as the base _grouping.scss for <p> and <li>
+  //
+  .form-item label,
+  .field--type-datetime h4,
+  .field--type-string label,
+  .field--type-list-string label {
+    font-weight: normal;
+    @include font-size($font-base);
+    @include breakpoint($size-md, true) {
+      @include font-size($font-standard);
+    }
+  }
+}
+.form-item,
+.form-actions {
+  margin-bottom: 1.25rem;
+  div:last-child {
+    margin-bottom: 0;
+  }
+  .label {
+    color: $gray3;
+    font-weight: normal;
+  }
+}
+.form-text,
+.form-email {
+  height: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.form-textarea {
+  min-height: 175px;
+}
+//
+// Form Field: Select List
+//
+.form-select {
+  // height: 2.5rem;
+  font-size: 1rem;
+  color: $color4;
+}
+
+.form-submit,
+button.form-submit {
+  color: $color2;
+  padding: .5rem;
+  @include font-size($font-small);
+  margin-top: .5rem;
+  &:hover {
+    // color: $color1;
+    background: $color3;
+    border: solid 1px $color3;
+  }
+}

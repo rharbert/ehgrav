@@ -1,0 +1,6 @@
+
+.line-break {
+  @include breakpoint(580px, true) {
+    display: block;
+  }
+}

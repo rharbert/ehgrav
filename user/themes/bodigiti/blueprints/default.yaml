@@ -1,0 +1,142 @@
+title: default
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+
+################################################################################
+############### Start Options tab
+################################################################################
+        options:
+          type: tab
+          title: PLUGIN_ADMIN.OPTIONS
+          fields:
+            publishing:
+              type: section
+              title: PLUGIN_ADMIN.PUBLISHING
+              underline: true
+              fields:
+                header.published:
+                  default: 0
+
+################################################################################
+############### Regions
+            regions:
+              type: section
+              title: Regions
+              ordering@: -1
+              fields:
+
+################################################################################
+############### Sidebar One
+                fieldset__sidebar_one:
+                  type: fieldset
+                  title: Sidebar One
+                  collapsed: true
+                  collapsible: true
+                  classes: 'toggle region__sidebar_one'
+                  fields:
+
+                    ### Sidebar One Enabled
+                    header.region__sidebar_one__enabled:
+                      type: toggle
+                      toggleable: true
+                      label: Sidebar One Enabled
+                      options:
+                        1: PLUGIN_ADMIN.ENABLED
+                        0: PLUGIN_ADMIN.DISABLED
+                      validate:
+                        type: bool
+
+                    ### Sidebar One Content Inject
+                    header.region__sidebar_one__content:
+                      name: module
+                      type: list
+                      style: vertical
+                      fields:
+                        .content__admin_title:
+                          type: text
+                          style: vertical
+                          placeholder: Admin title
+                          default: 'Sidebar One'
+                        .content_inject__url:
+                          type: text
+                          label: Content Inject
+                          toggleable: true
+                          default: /sidebar-one
+
+############### Footer
+                header.region__footer_pre__enabled:
+                  type: toggle
+                  toggleable: true
+                  label: Footer-Pre Visible
+                  options:
+                    1: PLUGIN_ADMIN.ENABLED
+                    0: PLUGIN_ADMIN.DISABLED
+                  validate:
+                    type: bool
+
+################################################################################
+##### Advanced Tab
+      advanced:
+          fields:
+            columns:
+              fields:
+                column1:
+                  fields:
+                    header.body_classes:
+                      type: text
+                      description: 'Available classes (space separated):<br />No classes presently available'
+
+            overrides:
+              type: section
+              title: PLUGIN_ADMIN.OVERRIDES
+              underline: true
+
+              fields:
+
+                header.dateformat:
+                  unset@: true
+
+                header.menu:
+                  type: text
+                  label: PLUGIN_ADMIN.MENU
+                  toggleable: true
+                  help: PLUGIN_ADMIN.MENU_HELP
+
+                header.slug:
+                  unset@: true
+
+                header.redirect:
+                  type: text
+                  label: PLUGIN_ADMIN.REDIRECT
+                  toggleable: true
+                  help: PLUGIN_ADMIN.REDIRECT_HELP
+
+#                header.twig_first:
+#                  unset@: true
+#                header.never_cache_twig:
+#                  unset@: true
+                header.child_type:
+                  unset@: true
+                header.routable:
+                  unset@: true
+                ## 'Visible' used to determine if shown in navigation.html.twig
+                ## Set default to 'Disabled'
+                header.visible:
+                  description: 'Determines if shown in navigation; disabled by default'
+                  highlight: 0
+                  default: 0
+                header.debugger:
+                  unset@: true
+                header.template:
+                  unset@: true
+                header.append_url_extension:
+                  unset@: true
+
+            admin_only:
+              unset@: true

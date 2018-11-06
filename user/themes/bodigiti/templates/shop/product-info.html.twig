@@ -1,0 +1,111 @@
+
+<section class="product-group-wrapper clearfix">
+
+  {##
+   # Slideshow vertical/horizontal (choose which to include)
+   #}
+   {% include 'shop/slider-vertical.html.twig' %}
+
+  {##
+   # Details
+   #}
+  <section class="product-group__details">
+    {# Title + Price #}
+    <div class="title-price clearfix">
+      {# Title #}
+      {% set title_level = title_level ?: 'h1' %}
+      {% set title_class = 'class="h3-alt"' %}
+      <div class="product-title"><{{ title_level }} {{ title_class }}>{{ page.title }}</{{ title_level }}></div>
+
+      {# Price #}
+      <div class="product-price">
+        <span class="label">$</span>
+        <span class="value">{{ page.header.product_price }}</span>
+      </div>
+    </div>
+    {# End Title + Price #}
+
+    {# Product ID #}
+    <div class="product-group__ids">
+      <div class="product-id">
+        <span class="label">Item # </span>
+        <span class="value">
+          <span>{{ page.header.product_id }}</span>
+        </span>
+      </div>
+    </div>
+
+
+    {# Product Description, Size, Add-to-cart #}
+    <div class="product-group__describe-price">
+
+      {# Description #}
+      <div class="product-description">
+        {# Textbox Markdown Field #}
+        {% block content %}
+          {{ page.content }}
+        {% endblock %}
+      </div>
+
+      {#########################################################################
+       # Stock Check: Wraps entire size-select and buy button
+       ########################################################################}
+      {% if page.header.out_of_stock %}
+        <div class="out-of-stock">Currently out of stock - check back soon</div>
+      {% else %}
+
+      {# Size Chooser #}
+      {% set s = page.header.sizes %}
+      {% if s %}
+        <select required="required" id="size-chooser" class="form-control sizes" name="size-chooser">
+          <option value="" class="default" title="choose your size">choose your size</option>
+          {% if s.sm == true %}<option class="size" value="S">S</option>{% endif %}
+          {% if s.md == true %}<option class="size" value="M">M</option>{% endif %}
+          {% if s.lg == true %}<option class="size" value="L">L</option>{% endif %}
+        </select>
+      {% endif %}
+
+      {# Size Chooser Error message: relies on js and css #}
+      <div class="error-message">Please select a size</div>
+
+      {##
+       # Snipcart Add-to-cart Button
+       #}
+      {# Snipcart Thumbnail: Get for output in <button> data-item-image #}
+      {% set firstImage = page.media.images|first %}
+      {% set cropImage = firstImage.cropZoom(180,180) %}
+      {% set croppedImageURL = base_url_absolute ~ cropImage.url %}
+      {# End Snipcart Thumbnail #}
+      <div class="product-cart-button">
+        <button id="add-to-cart" type="button" class="js-add-item snipcart-add-item"
+          data-item-id="{{ page.header.product_id }}"
+          data-item-name="{{ page.title }}"
+          data-item-price="{{ page.header.product_price }}"
+          data-item-quantity="1"
+          data-item-url="{{ base_url_absolute }}{{ page.url }}"
+          data-item-image="{{ croppedImageURL }}"
+          data-item-description="{{ page.header.product_id }}"
+          {% if page.header.sizes %}
+          {% set s = page.header.sizes %}
+            data-item-custom1-name="Size"
+            data-item-custom1-options="{% if s.xs == true %}XS|{% endif %}{% if s.sm == true %}S|{% endif %}{% if s.md == true %}M|{% endif %}{% if s.lg == true %}L|{% endif %}{% if s.xl == true %}XL|{% endif %}{% if s.xxl == true %}XXL{% endif %}"
+          {% endif %}
+          >add to cart</button> {# Closes opening button element with '>' #}
+      </div> {## End Snipcart Add-to-cart Button ##}
+      {% endif %} {## End Stock check ##}
+      {#########################################################################
+       # End Stock Check: Wraps entire size-select and buy button
+       ########################################################################}
+    </div>{## End Product Description, Size, Add-to-cart #}
+
+
+    {# Region: Product Details Default #}
+    <div class="product-description">
+      {# Textbox Markdown Field #}
+      {% include 'modules/modules.html.twig' with {'page': page.find('/region-product-details-default')} %}
+    </div>{## End Product Details Default #}
+
+  </section>
+  {# End: Details #}
+
+</section>

@@ -1,0 +1,494 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Margins & Padding (base-and-component-support)
+////////////////////////////////////////////////////////////////////////////////
+
+$mp_xxs_px: 5px;
+$mp_xxs_rem: .3125rem;
+$mp_xs_px: 16px;
+$mp_xs_rem: 1rem;
+$mp_sm_px: 32px;
+$mp_sm_rem: 2rem;
+$mp_md_px: 48px;
+$mp_md_rem: 3rem;
+$mp_lg_px: 64px;
+$mp_lg_rem: 4rem;
+$mp_xl_px: 80px;
+$mp_xl_rem: 5rem;
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Margin Right-Left Auto
+////////////////////////////////////////////////////////////////////////////////
+.margin-auto__right-left {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Mobile Margin + Padding
+////////////////////////////////////////////////////////////////////////////////
+
+// Mobile: Margin Mobile+ ////////////////////////////////////
+.margin-left-right__xs-plus {
+  margin-left: $mp_xxs_px;
+  margin-left: $mp_xxs_rem;
+  margin-right: $mp_xxs_px;
+  margin-right: $mp_xxs_rem;
+  @include breakpoint($size-xl, true) {
+    margin-left: $mp_xs_px;
+    margin-left: $mp_xs_rem;
+    margin-right: $mp_xs_px;
+    margin-right: $mp_xs_rem;
+  }
+  @include breakpoint($size-xl, true) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.margin-left-right__xs-plus__inner > .inner {
+  margin-left: $mp_xxs_px;
+  margin-left: $mp_xxs_rem;
+  margin-right: $mp_xxs_px;
+  margin-right: $mp_xxs_rem;
+  @include breakpoint($size-xl, true) {
+    margin-left: $mp_xs_px;
+    margin-left: $mp_xs_rem;
+    margin-right: $mp_xs_px;
+    margin-right: $mp_xs_rem;
+  }
+  @include breakpoint($size-xl, true) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Mobile: Padding Mobile+ ////////////////////////////////////
+.padding-left-right__xs-plus {
+  padding-left: $mp_xxs_px;
+  padding-left: $mp_xxs_rem;
+  padding-right: $mp_xxs_px;
+  padding-right: $mp_xxs_rem;
+  @include breakpoint($size-xl, true) {
+    margin-left: $mp_xs_px;
+    margin-left: $mp_xs_rem;
+    margin-right: $mp_xs_px;
+    margin-right: $mp_xs_rem;
+  }
+  @include breakpoint($size-xl, true) {
+    padding-left: auto;
+    padding-right: auto;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Margin
+////////////////////////////////////////////////////////////////////////////////
+
+// Margin Bottom ////////////////////////////////////
+.margin-bottom__none__children .paragraph,
+.margin-bottom__none {
+  margin-bottom: 0;
+}
+.margin-bottom__xxs__children .paragraph,
+.margin-bottom__xxs {
+  margin-bottom: $mp_xxs_px;
+  margin-bottom: $mp_xxs_rem;
+}
+.margin-bottom__xs__children .paragraph,
+.margin-bottom__xs {
+  margin-bottom: $mp_xs_px;
+  margin-bottom: $mp_xs_rem;
+}
+.margin-bottom__sm__children .paragraph,
+.margin-bottom__sm {
+  margin-bottom: $mp_sm_px;
+  margin-bottom: $mp_sm_rem;
+}
+.margin-bottom__md__children .paragraph,
+.margin-bottom__md {
+  margin-bottom: $mp_md_px;
+  margin-bottom: $mp_md_rem;
+}
+.margin-bottom__lg__children .paragraph,
+.margin-bottom__lg {
+  margin-bottom: $mp_lg_px;
+  margin-bottom: $mp_lg_rem;
+}
+.margin-bottom__xl__children .paragraph,
+.margin-bottom__xl {
+  margin-bottom: $mp_xl_px;
+  margin-bottom: $mp_xl_rem;
+}
+
+// Margin Top Bottom ////////////////////////////////////
+.margin-top-bottom__none__children .paragraph,
+.margin-top-bottom__none {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.margin-top-bottom__xxs__children .paragraph,
+.margin-top-bottom__xxs {
+  margin-top: $mp_xxs_px;
+  margin-top: $mp_xxs_rem;
+  margin-bottom: $mp_xxs_px;
+  margin-bottom: $mp_xxs_rem;
+}
+.margin-top-bottom__xs__children .paragraph,
+.margin-top-bottom__xs {
+  margin-top: $mp_xs_px;
+  margin-top: $mp_xs_rem;
+  margin-bottom: $mp_xs_px;
+  margin-bottom: $mp_xs_rem;
+}
+.margin-top-bottom__sm__children .paragraph,
+.margin-top-bottom__sm {
+  margin-top: $mp_sm_px;
+  margin-top: $mp_sm_rem;
+  margin-bottom: $mp_sm_px;
+  margin-bottom: $mp_sm_rem;
+}
+.margin-top-bottom__md__children .paragraph,
+.margin-top-bottom__md {
+  margin-top: $mp_md_px;
+  margin-top: $mp_md_rem;
+  margin-bottom: $mp_md_px;
+  margin-bottom: $mp_md_rem;
+}
+.margin-top-bottom__lg__children .paragraph,
+.margin-top-bottom__lg {
+  margin-top: $mp_lg_px;
+  margin-top: $mp_lg_rem;
+  margin-bottom: $mp_lg_px;
+  margin-bottom: $mp_lg_rem;
+}
+.margin-top-bottom__xl__children .paragraph,
+.margin-top-bottom__xl {
+  margin-top: $mp_xl_px;
+  margin-top: $mp_xl_rem;
+  margin-bottom: $mp_xl_px;
+  margin-bottom: $mp_xl_rem;
+}
+
+// Margin Top ////////////////////////////////////
+.margin-top__none__children .paragraph,
+.margin-top__none {
+  margin-top: 0;
+}
+.margin-top__xxs__children .paragraph,
+.margin-top__xxs {
+  margin-top: $mp_xxs_px;
+  margin-top: $mp_xxs_rem;
+}
+.margin-top__xs__children .paragraph,
+.margin-top__xs {
+  margin-top: $mp_xs_px;
+  margin-top: $mp_xs_rem;
+}
+.margin-top__sm__children .paragraph,
+.margin-top__sm {
+  margin-top: $mp_sm_px;
+  margin-top: $mp_sm_rem;
+}
+.margin-top__md__children .paragraph,
+.margin-top__md {
+  margin-top: $mp_md_px;
+  margin-top: $mp_md_rem;
+}
+.margin-top__lg__children .paragraph,
+.margin-top__lg {
+  margin-top: $mp_lg_px;
+  margin-top: $mp_lg_rem;
+}
+.margin-top__xl__children .paragraph,
+.margin-top__xl {
+  margin-top: $mp_xl_px;
+  margin-top: $mp_xl_rem;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Padding
+////////////////////////////////////////////////////////////////////////////////
+
+// Padding All
+.padding__xxs__children .paragraph,
+.padding__xxs {
+  padding: $mp_xxs_px;
+  padding: $mp_xxs_rem;
+}
+.padding__xs__children .paragraph,
+.padding__xs {
+  padding: $mp_xs_px;
+  padding: $mp_xs_rem;
+}
+.padding__sm__children .paragraph,
+.padding__sm {
+  padding: $mp_sm_px;
+  padding: $mp_sm_rem;
+}
+.padding__md__children .paragraph,
+.padding__md {
+  padding: $mp_md_px;
+  padding: $mp_md_rem;
+}
+.padding__lg__children .paragraph,
+.padding__lg {
+  padding: $mp_lg_px;
+  padding: $mp_lg_rem;
+}
+
+// Padding Top
+.padding-top__xxs__children .paragraph,
+.padding-top__xxs {
+  padding-top: $mp_xxs_px;
+  padding-top: $mp_xxs_rem;
+}
+.padding-top__xs__children .paragraph,
+.padding-top__xs {
+  padding-top: $mp_xs_px;
+  padding-top: $mp_xs_rem;
+}
+.padding-top__sm__children .paragraph,
+.padding-top__sm {
+  padding-top: $mp_sm_px;
+  padding-top: $mp_sm_rem;
+}
+.padding-top__md__children .paragraph,
+.padding-top__md {
+  padding-top: $mp_md_px;
+  padding-top: $mp_md_rem;
+}
+.padding-top__lg__children .paragraph,
+.padding-top__lg {
+  padding-top: $mp_lg_px;
+  padding-top: $mp_lg_rem;
+}
+
+// Padding Bottom
+.padding-bottom__xxs__children .paragarph,
+.padding-bottom__xxs {
+  padding-bottom: $mp_xxs_px;
+  padding-bottom: $mp_xxs_rem;
+}
+.padding-bottom__xs__children .paragarph,
+.padding-bottom__xs {
+  padding-bottom: $mp_xs_px;
+  padding-bottom: $mp_xs_rem;
+}
+.padding-bottom__sm__children .paragarph,
+.padding-bottom__sm {
+  padding-bottom: $mp_sm_px;
+  padding-bottom: $mp_sm_rem;
+}
+.padding-bottom__md__children .paragarph,
+.padding-bottom__md {
+  padding-bottom: $mp_md_px;
+  padding-bottom: $mp_md_rem;
+}
+.padding-bottom__lg__children .paragarph,
+.padding-bottom__lg {
+  padding-bottom: $mp_lg_px;
+  padding-bottom: $mp_lg_rem;
+}
+
+// Padding right
+.padding-right__xxs__children .paragraph,
+.padding-right__xxs {
+  padding-right: $mp_xxs_px;
+  padding-right: $mp_xxs_rem;
+}
+.padding-right__xs__children .paragraph,
+.padding-right__xs {
+  padding-right: $mp_xs_px;
+  padding-right: $mp_xs_rem;
+}
+.padding-right__sm__children .paragraph,
+.padding-right__sm {
+  padding-right: $mp_sm_px;
+  padding-right: $mp_sm_rem;
+}
+.padding-right__md__children .paragraph,
+.padding-right__md {
+  padding-right: $mp_md_px;
+  padding-right: $mp_md_rem;
+}
+.padding-right__lg__children .paragraph,
+.padding-right__lg {
+  padding-right: $mp_lg_px;
+  padding-right: $mp_lg_rem;
+}
+
+// Padding left
+.padding-left__xxs__children .paragraph,
+.padding-left__xxs {
+  padding-left: $mp_xxs_px;
+  padding-left: $mp_xxs_rem;
+}
+.padding-left__xs__children .paragraph,
+.padding-left__xs {
+  padding-left: $mp_xs_px;
+  padding-left: $mp_xs_rem;
+}
+.padding-left__sm__children .paragraph,
+.padding-left__sm {
+  padding-left: $mp_sm_px;
+  padding-left: $mp_sm_rem;
+}
+.padding-left__md__children .paragraph,
+.padding-left__md {
+  padding-left: $mp_md_px;
+  padding-left: $mp_md_rem;
+}
+.padding-left__lg__children .paragraph,
+.padding-left__lg {
+  padding-left: $mp_lg_px;
+  padding-left: $mp_lg_rem;
+}
+
+// Padding Top and Bottom
+.padding-top-bottom__xxs__children .paragraph,
+.padding-top-bottom__xxs {
+  padding-top: $mp_xxs_px;
+  padding-top: $mp_xxs_rem;
+  padding-bottom: $mp_xxs_px;
+  padding-bottom: $mp_xxs_rem;
+}
+.padding-top-bottom__xs__children .paragraph,
+.padding-top-bottom__xs {
+  padding-top: $mp_xs_px;
+  padding-top: $mp_xs_rem;
+  padding-bottom: $mp_xs_px;
+  padding-bottom: $mp_xs_rem;
+}
+.padding-top-bottom__sm__children .paragraph,
+.padding-top-bottom__sm {
+  padding-top: $mp_sm_px;
+  padding-top: $mp_sm_rem;
+  padding-bottom: $mp_sm_px;
+  padding-bottom: $mp_sm_rem;
+}
+.padding-top-bottom__md__children .paragraph,
+.padding-top-bottom__md {
+  padding-top: $mp_md_px;
+  padding-top: $mp_md_rem;
+  padding-bottom: $mp_md_px;
+  padding-bottom: $mp_md_rem;
+}
+.padding-top-bottom__lg__children .paragraph,
+.padding-top-bottom__lg {
+  padding-top: $mp_lg_px;
+  padding-top: $mp_lg_rem;
+  padding-bottom: $mp_lg_px;
+  padding-bottom: $mp_lg_rem;
+}
+
+// Padding Left and Right
+.padding-right-left__xxs__children .paragraph,
+.padding-right-left__xxs {
+  padding-right: $mp_xxs_px;
+  padding-right: $mp_xxs_rem;
+  padding-left: $mp_xxs_px;
+  padding-left: $mp_xxs_rem;
+}
+.padding-right-left__xs__children .paragraph,
+.padding-right-left__xs {
+  padding-right: $mp_xs_px;
+  padding-right: $mp_xs_rem;
+  padding-left: $mp_xs_px;
+  padding-left: $mp_xs_rem;
+}
+.padding-right-left__sm__children .paragraph,
+.padding-right-left__sm {
+  padding-right: $mp_sm_px;
+  padding-right: $mp_sm_rem;
+  padding-left: $mp_sm_px;
+  padding-left: $mp_sm_rem;
+}
+.padding-right-left__md__children .paragraph,
+.padding-right-left__md {
+  padding-right: $mp_md_px;
+  padding-right: $mp_md_rem;
+  padding-left: $mp_md_px;
+  padding-left: $mp_md_rem;
+}
+.padding-right-left__lg__children .paragraph,
+.padding-right-left__lg {
+  padding-right: $mp_lg_px;
+  padding-right: $mp_lg_rem;
+  padding-left: $mp_lg_px;
+  padding-left: $mp_lg_rem;
+}
+
+// Padding Top and left
+.padding-top-left__xxs__children .paragraph,
+.padding-top-left__xxs {
+  padding-top: $mp_xxs_px;
+  padding-top: $mp_xxs_rem;
+  padding-left: 8px;
+  padding-left: $mp_xxs_rem;
+}
+.padding-top-left__xs__children .paragraph,
+.padding-top-left__xs {
+  padding-top: $mp_xs_px;
+  padding-top: $mp_xs_rem;
+  padding-left: $mp_xs_px;
+  padding-left: $mp_xs_rem;
+}
+.padding-top-left__sm__children .paragraph,
+.padding-top-left__sm {
+  padding-top: $mp_sm_px;
+  padding-top: $mp_sm_rem;
+  padding-left: $mp_sm_px;
+  padding-left: $mp_sm_rem;
+}
+.padding-top-left__md__children .paragraph,
+.padding-top-left__md {
+  padding-top: $mp_md_px;
+  padding-top: $mp_md_rem;
+  padding-left: $mp_md_px;
+  padding-left: $mp_md_rem;
+}
+.padding-top-left__lg__children .paragraph,
+.padding-top-left__lg {
+  padding-top: $mp_lg_px;
+  padding-top: $mp_lg_rem;
+  padding-left: $mp_lg_px;
+  padding-left: $mp_lg_rem;
+}
+
+// Padding Top and Right
+.padding-top-right__xxs__children .paragraph,
+.padding-top-right__xxs {
+  padding-top: 8px;
+  padding-top: $mp_xxs_rem;
+  padding-right: 8px;
+  padding-right: $mp_xxs_rem;
+}
+.padding-top-right__xs__children .paragraph,
+.padding-top-right__xs {
+  padding-top: $mp_xs_px;
+  padding-top: $mp_xs_rem;
+  padding-right: $mp_xs_px;
+  padding-right: $mp_xs_rem;
+}
+.padding-top-right__sm__children .paragraph,
+.padding-top-right__sm {
+  padding-top: $mp_sm_px;
+  padding-top: $mp_sm_rem;
+  padding-right: $mp_sm_px;
+  padding-right: $mp_sm_rem;
+}
+.padding-top-right__md__children .paragraph,
+.padding-top-right__md {
+  padding-top: $mp_md_px;
+  padding-top: $mp_md_rem;
+  padding-right: $mp_md_px;
+  padding-right: $mp_md_rem;
+}
+.padding-top-right__lg__children .paragraph,
+.padding-top-right__lg {
+  padding-top: $mp_lg_px;
+  padding-top: $mp_lg_rem;
+  padding-right: $mp_lg_px;
+  padding-right: $mp_lg_rem;
+}

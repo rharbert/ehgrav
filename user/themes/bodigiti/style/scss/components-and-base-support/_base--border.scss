@@ -1,0 +1,52 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Borders (base-and-component-support)
+// Borders for misc, including use in modules/paragraphs
+////////////////////////////////////////////////////////////////////////////////
+
+$border_style_solid: solid;
+$border_width_xs: 1px;
+
+@mixin border($style: $borderStyle, $width: $borderWidth, $color: $borderColor) {
+  border-style: ($style);
+  border-width: ($width);
+  border-color: ($color);
+}
+
+@mixin border-top($style: $borderStyle, $width: $borderWidth, $color: $borderColor) {
+  border-top-style: ($style);
+  border-width: ($width);
+  border-color: ($color);
+}
+
+// All Around Border
+.border__xs {
+  &.black {
+    @include border($border_style_solid, $border_width_xs, $color1);
+  }
+  &.white {
+    @include border($border_style_solid, $border_width_xs, $color2);
+  }
+  &.dark-gray {
+    @include border($border_style_solid, $border_width_xs, $color3);
+  }
+  &.red {
+    @include border($border_style_solid, $border_width_xs, $color4);
+  }
+}
+
+// Top Border
+.border-top__xs {
+  &.black {
+    @include border-top($border_style_solid, $border_width_xs, $color1);
+  }
+  &.white {
+    @include border-top($border_style_solid, $border_width_xs, $color2);
+  }
+  &.dark-gray {
+    @include border($border_style_solid, $border_width_xs, $color3);
+  }
+  &.red {
+    @include border($border_style_solid, $border_width_xs, $color4);
+  }
+}

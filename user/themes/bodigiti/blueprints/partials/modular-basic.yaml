@@ -1,0 +1,76 @@
+title: modular-basic
+'@extends':
+  type: modular
+
+form:
+  fields:
+    tabs:
+      fields:
+####### Start Content
+####### Start Options
+        options:
+          unset@: true
+####### Start Advanced
+        advanced:
+          fields:
+########### Start columns
+            columns:
+              fields:
+                column1:
+                  fields:
+                    header.body_classes:
+                      unset@: true
+                    name:
+                      label: Module Type
+                column2:
+                  fields:
+                    ordering:
+                      label: PLUGIN_ADMIN.FOLDER_NUMERIC_PREFIX
+                      default: 1
+                    order:
+                      type: order
+                      label: Sortable Modules
+                      sitemap:
+########### Start overrides
+            overrides:
+              title:
+                unset@: true
+              underline: false
+
+              fields:
+                header.dateformat:
+                  unset@: true
+                header.slug:
+                  unset@: true
+                header.twig_first:
+                  unset@: true
+                header.never_cache_twig:
+                  unset@: true
+                header.menu:
+                  unset@: true
+                header.redirect:
+                  unset@: true
+                header.visible:
+                  unset@: true
+                header.child_type:
+                  unset@: true
+                header.routable:
+                  unset@: true
+                header.cache_enable:
+                  unset@: true
+                header.debugger:
+                  unset@: true
+                header.template:
+                  unset@: true
+                header.append_url_extension:
+                  unset@: true
+########### Start routes_only
+            routes_only:
+              unset@: true
+########### Start Admin_Only
+            admin_only:
+              unset@: true
+
+              fields:
+                header.admin.children_display_order:
+                  unset@: true

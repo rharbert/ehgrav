@@ -1,0 +1,66 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Lightslider (slide component)
+////////////////////////////////////////////////////////////////////////////////
+
+#lightslider-wrapper__horizontal {
+  max-width: 798px; // Needs to be 2px less than site.js "Zoom Background Image"
+  margin: 0 auto;
+  ul {
+    margin: 0 auto;
+    &.list-unstyled {
+      list-style: none;
+    }
+  }
+  li {
+    margin-top: 2px;
+  }
+  img {
+    max-width: 100%;
+  }
+
+  @media (max-width: $size-md) {
+    //
+    // Pager circle icons (for mobile instead of gallery thumbnails)
+    // http://jsfiddle.net/eu00ygdm/1/
+    //
+    .lSSlideOuter .lSPager {
+        margin: 10px 0 0;
+        padding: 0;
+    }
+    .lSSlideOuter ul.lSPager {
+        // center ul
+        display: flex;
+        justify-content: center;
+    }
+    .lSSlideOuter .lSPager > li {
+        cursor: pointer;
+        display: inline-block;
+        padding: 0 5px;
+        width:auto !important;
+        padding-top: .65rem;
+    }
+    .lSSlideOuter .lSPager > li img {
+        display: none !important;
+    }
+    // Create the circle icons
+    .lSSlideOuter .lSPager > li span {
+        background-color: $color3;
+        border-radius: 30px;
+        display: inline-block;
+        height: 16px;
+        overflow: hidden;
+        text-indent: -999em;
+        width: 16px;
+        position: relative;
+        z-index: 99;
+        -webkit-transition: all 0.5s linear 0s;
+        transition: all 0.5s linear 0s;
+    }
+    .lSSlideOuter .lSPager > li:hover span, .lSSlideOuter .lSPager > li.active span {
+        background-color: $color4;
+    }
+    // End of pager
+    //////////////////////////////////////////////////////////////////////////////
+  }
+}

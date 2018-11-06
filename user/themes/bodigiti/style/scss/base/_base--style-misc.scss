@@ -1,0 +1,39 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Style-Misc Base
+////////////////////////////////////////////////////////////////////////////////
+
+//
+// Input Element
+//
+// Hide input element increase/descrease controls
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.pipe-break {
+  margin: 0 .5rem;
+  display: none;
+  &.small {
+    @include breakpoint($size-sm, true) {
+      display: inline-block;
+    }
+  }
+  &.small-plus {
+    @include breakpoint($size-sm-plus, true) {
+      display: inline-block;
+    }
+  }
+  &.medium {
+    @include breakpoint($size-md, true) {
+      display: inline-block;
+    }
+  }
+  &.large {
+    @include breakpoint($size-lg, true) {
+      display: inline-block;
+    }
+  }
+}

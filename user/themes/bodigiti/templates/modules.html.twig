@@ -1,0 +1,39 @@
+{% extends 'partials/base.html.twig' %}
+
+{# set empty variable #}
+{% set styleSelect = [] %}
+{# add results to variable to be included below in 'classes' as 'styleSelect' #}
+{% for s in header.module_styles__select %} {% set styleSelect = styleSelect|merge([s]) %} {% endfor %}
+{# output results of above directly into the <div for class="" with a for loop #}
+
+{% set classes = [
+   header.module_styles__text ? header.module_styles__text ~ ' ',
+  ]
+%}
+
+{% block content %}
+  <section id="main-wrapper" class="modules">
+    {# Page Title: Optional #}
+    {% if page.header.title %}
+      {% include 'partials/title.html.twig' ignore missing %}
+    {% endif %}
+    {# End Page Title: Optional #}
+    <section id="main" class="clearfix {% for class in classes %}{{ class }}{% endfor %}{% for s in styleSelect %} {{ s }}{% endfor %}">
+      <main id="main-content">
+        <div class="inner">
+          {# Modules #}
+          {% include 'modules/module--hero.html.twig' ignore missing %}
+          {% include 'modules/modules.html.twig' ignore missing %}
+          {# End: Modules #}
+        </div>
+      </main>
+
+      {# Sidebar One Region: Optional #}
+      {% if page.header.region__sidebar_one__enabled %}
+        {% include 'partials/region/sidebar-one.html.twig' ignore missing %}
+      {% endif %}
+      {# End Sidebar One Region: Optional #}
+
+    </section>
+  </section>
+{% endblock %}

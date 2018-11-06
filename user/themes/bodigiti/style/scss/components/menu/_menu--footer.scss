@@ -1,0 +1,25 @@
+
+/**
+ * Menu Footer (component)
+ * -----------------------------------------------------------------------------
+ */
+
+#footer nav {
+  h2 {
+    font-size: $font-medium-large;
+    font-weight: $font-weight-regular;
+    margin-bottom: 12px;
+    margin-bottom: .75rem;
+  }
+  li {
+    padding: 0 0 4px 0;
+    padding: 0 0 .25rem 0;
+  }
+  a {
+    // region footer stylesheet applies color with @mixin background-and-color
+    text-decoration: none;
+    &:hover {
+      border-bottom: 1px solid $color2;
+    }
+  }
+}

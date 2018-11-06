@@ -1,0 +1,23 @@
+{# Start for loop first so teaser does not render if there is no image in slideshow #}
+{% for slide in page.header.slideshow %}
+  {% if loop.first %}
+  <div class="product-teaser">
+    <article>
+      <a href="{{ page.url }}">
+        <div class="product--info">
+          <div class="product--image">
+            {% set image = page.media.images[slide.image] %}
+            {{ image.cropZoom(360,480).html('', slide.alt, '') }}
+          </div>
+          <div class="product--header">
+            {% if page.header.product_price %}
+              <div class="product--price">${{ page.header.product_price }}</div>
+            {% endif %}
+            <div class="product--title">{{ page.title }}</div>
+          </div>
+        </div>
+      </a>
+    </article>
+  </div>
+  {% endif %}
+{% endfor %}

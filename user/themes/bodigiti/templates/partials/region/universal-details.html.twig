@@ -1,0 +1,6 @@
+<aside id="universal-details" class="section universal-details" role="complementary">
+  {# Content Injected Components #}
+  {% for c in page.header.region__universal_details__content %}
+    {% include 'modules/modules.html.twig' with {'page': page.find(c.content_inject__url)} %}
+  {% endfor %}
+</aside>

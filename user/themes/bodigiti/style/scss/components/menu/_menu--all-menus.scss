@@ -1,0 +1,19 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Menu-all-menus (component) !Except Mobile Menu
+////////////////////////////////////////////////////////////////////////////////
+
+.menu-default ul,
+.menu-default li {
+  //
+  // Override default browser padding and margin
+  //
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  // Revert line-height assigend to all ul/li in base styles
+}
+
+.menu-list a {
+  display: block;
+}

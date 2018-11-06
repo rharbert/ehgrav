@@ -1,0 +1,54 @@
+
+// Isotope Dependents
+// 1) External JS included in theme's JS directory, two files: isotope and images imagesLoaded
+// 2) Twig/Html templates: add classes and elements appropriately
+// 3) CSS (below)
+// 4) Site.js isotope initialization and options (see bottom of file)
+
+////////////////////////////////////////////////////////////////////////////////
+// grid
+////////////////////////////////////////////////////////////////////////////////
+
+// force scrollbar
+html { overflow-y: scroll; }
+
+////////////////////////////////////////////////////////////////////////////////
+// isotope
+////////////////////////////////////////////////////////////////////////////////
+
+// Override Bodigit Theme Default 'columns' class added to all modules
+.columns.grid-isotope {
+  display: block;
+}
+
+// clear fix
+.grid-isotope:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+// .grid-item
+
+.grid-sizer,
+.grid-item {
+  width: 100%;
+  padding: 0 .5rem;
+  @include breakpoint($size-sm) {
+    width: 50%;
+    padding: 0 1rem;
+  }
+  @include breakpoint($size-lg) {
+    width: 33.333%;
+    padding: 0 2rem;
+  }
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}

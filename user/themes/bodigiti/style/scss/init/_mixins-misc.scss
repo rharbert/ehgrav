@@ -1,0 +1,120 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// @file
+// Custom sass mixins
+// Define the custom mixins for your project here.
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
+////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////
+// clearfix()
+// Allows the bottom of an element to extend to the bottom of all floated
+// children elements. @see http://nicolasgallagher.com/micro-clearfix-hack/
+//
+// We use the micro-clearfix, optimized for use in `@extend` where fewer `&` is
+// better.
+// Style guide: sass.mixins.clearfix
+////////////////////////////////////////////////////////////////////////////////
+
+@mixin clearfix() {
+  clear: both;
+  &:before {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  // For IE 6/7 (trigger hasLayout)
+  & {
+    zoom: 1;
+  }
+}
+
+//
+// Colors: Background + Text
+//
+@mixin background-and-text($backColor, $textColor) {
+  background-color: ($backColor);
+  a,h1,h2,h3,h4,h5,h6,p,div,ol,ul {
+    color: ($textColor);
+  }
+}
+
+//
+// Border Radius
+//
+@mixin border-radius {
+  border-radius: .25em;
+}
+
+//
+// Makes an element visually hidden, but accessible.
+// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility.
+//
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+//
+// Text White.
+//
+@mixin text-white {
+  h1, h2, h3, h4, h5, h6, p, li, a {
+    color: $color2;
+  }
+}
+
+//
+// Font Jumbo.
+//
+@mixin font-jumbo {
+  font-size: $font-jumbo;
+  line-height: 56px;
+  margin: .25em 0em .25em 0em;
+}
+
+//
+// Turns off the element-invisible effect.
+//
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+//
+// Makes an element visually hidden by default, but visible when focused.
+//
+@mixin element-focusable {
+  @include element-invisible;
+
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
+
+//
+// Vertical Align Middle.
+// http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+//
+// To use: @include vertical-align();
+//
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

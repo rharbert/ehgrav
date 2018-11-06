@@ -1,0 +1,121 @@
+title: product
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+
+        content:
+          title: Product
+          fields:
+            # Remove here and add back under 'Product Slideshow'
+            header.media_order:
+              unset@: true
+
+            header.product_id:
+              ordering@: 1
+              type: text
+              autofocus: true
+              style: vertical
+              label: Product ID
+              validate:
+                required: true
+
+            header.product_price:
+              ordering@: 2
+              type: text
+              autofocus: true
+              style: vertical
+              label: Price
+              description: 'Do not include $ as it is applied automatically.'
+              validate:
+                type: number
+                min: 1
+                required: true
+
+            header.sizes:
+              ordering@: 3
+              type: checkboxes
+              toggleable: true
+              label: Sizes Available
+              default:
+                sm: true
+                md: true
+                lg: true
+              options:
+                sm: S
+                md: M
+                lg: L
+              use: keys
+
+            header.out_of_stock:
+              ordering@: 4
+              type: toggle
+              toggleable: true
+              label: Out of Stock
+              highlight: 1
+              size: medium
+              options:
+                1: PLUGIN_ADMIN.YES
+                0: PLUGIN_ADMIN.NO
+              validate:
+                type: bool
+
+            content:
+                type: markdown
+                label: Description
+                validate:
+                  type: textarea
+
+        slideshow:
+            ordering@: 1
+            type: tab
+            title: Product Slideshow
+            fields:
+
+              header.media_order:
+                type: pagemedia
+                label: PLUGIN_ADMIN.PAGE_MEDIA
+
+              header.slideshow:
+                  name: product_slide
+                  type: list
+                  style: vertical
+                  label: Slides
+                  fields:
+                    .alt:
+                        type: text
+                        label: Alt Text
+                    .image:
+                        type: filepicker
+                        preview_images: true
+                        acccept:
+                            - .png
+                            - .jpg
+                            - .gif
+                        label: Image
+
+        advanced:
+          fields:
+            columns:
+              fields:
+                column1:
+                  fields:
+                    header.body_classes:
+                      unset@: true
+
+            overrides:
+              type: section
+              title: PLUGIN_ADMIN.OVERRIDES
+              underline: true
+
+              fields:
+
+                header.menu:
+                  unset@: true
+
+            admin_only:
+              unset@: true

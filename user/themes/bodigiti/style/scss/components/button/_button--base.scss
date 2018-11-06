@@ -1,0 +1,172 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Button (component)
+////////////////////////////////////////////////////////////////////////////////
+
+%button {
+  font-family: $font-family-menus;
+  color: $color2;
+  background: $color3;
+  text-decoration: none;
+  display: inline-block;
+  &:hover {
+    text-decoration: none;
+    background: lighten($color3, 15%);
+  }
+}
+%colors-secondary {
+  background: $color4;
+  &:hover {
+    text-decoration: none;
+    background: lighten($color4, 15%);
+  }
+}
+%button--xs {
+  @include font-size-only($font-base);
+  font-weight: $font-weight-regular;
+  padding: .65rem 1.5rem .5rem 1.5rem;
+}
+%button--sm {
+  @include font-size-only($font-base);
+  font-weight: $font-weight-regular;
+  padding: .9rem .75rem .75rem .75rem;
+}
+%button--md {
+  @include font-size-only($font-medium-large);
+  font-weight: $font-weight-bold;
+  padding: 1.4rem 1rem 1.25rem 1rem;
+}
+%button--lg {
+  @include font-size-only($font-xxlarge);
+  font-weight: $font-weight-bold;
+  padding: 1.65rem 1.25rem 1.5rem 1.25rem;
+}
+%padding-right-left--sm {
+  padding-right: 32px;
+  padding-right: 2rem;
+  padding-left: 32px;
+  padding-left: 2rem;
+}
+%padding-right-left--md {
+  padding-right: 48px;
+  padding-right: 3rem;
+  padding-left: 48px;
+  padding-left: 3rem;
+}
+%padding-right-left--lg {
+  padding-right: 64px;
+  padding-right: 4rem;
+  padding-left: 64px;
+  padding-left: 4rem;
+}
+
+// This set of styles for when classes are not directly applied to <a>, for example,
+// <div class="button__left"><a> ... </a></div>
+// Two different color combinations
+.button {
+  &.colors-secondary {
+    @extend %colors-secondary;
+  }
+  button,
+  a {
+    @extend %button;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &__full-width {
+    a,
+    button {
+        width: 100%;
+    }
+  }
+  &__left {
+    .button-wrapper {
+      text-align: left;
+    }
+  }
+  &__center {
+    .button-wrapper {
+      text-align: center;
+    }
+  }
+  &__right {
+    .button-wrapper {
+      text-align: right;
+    }
+  }
+  &__xs button,
+  &__xs a {
+    @extend %button;
+    @extend %button--xs;
+  }
+  &__sm button,
+  &__sm a {
+    @extend %button;
+    @extend %button--sm;
+  }
+  &__md button,
+  &__md a {
+    @extend %button;
+    @extend %button--md;
+  }
+  &__lg button,
+  &__lg a {
+    @extend %button;
+    @extend %button--lg;
+  }
+  &.padding-right-left__sm {
+    @extend %padding-right-left--sm;
+  }
+  &.padding-right-left__md {
+    @extend %padding-right-left--md;
+  }
+  &.padding-right-left__lg {
+    @extend %padding-right-left--lg;
+  }
+}
+
+// This set of styles for when classes are directly applied to <a> or <button>
+// Two different color combinations
+a.button,
+button.button {
+  @extend %button;
+  text-decoration: none;
+  // display table needed to allow text-align center
+  display: table;
+  text-align: center;
+  &:hover {
+    text-decoration: none;
+  }
+  &__full-width {
+    width: 100%;
+  }
+  &__center {
+    margin: 0 auto;
+  }
+  &__xs {
+    @extend %button;
+    @extend %button--xs;
+  }
+  &__sm {
+    @extend %button;
+    @extend %button--sm;
+  }
+  &__md {
+    @extend %button;
+    @extend %button--md;
+  }
+  &__lg {
+    @extend %button;
+    @extend %button--lg;
+  }
+  &.padding-right-left__sm {
+    @extend %padding-right-left--sm;
+  }
+  &.padding-right-left__md {
+    @extend %padding-right-left--md;
+  }
+  &.padding-right-left__lg {
+    @extend %padding-right-left--lg;
+  }
+}

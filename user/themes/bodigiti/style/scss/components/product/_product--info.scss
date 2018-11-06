@@ -1,0 +1,75 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Product Info
+////////////////////////////////////////////////////////////////////////////////
+
+.product-group-wrapper {
+  margin: 0 0 6rem 0;
+  .product-group__image {
+    @include breakpoint($size-sm, true) {
+      @include span(15 at 1 of 24);
+    }
+  }
+  .product-group__details {
+    padding-right: 5px;
+    padding-left: 5px;
+    @include breakpoint($size-sm, true) {
+      @include span(8 at 17 of 24);
+    }
+  }
+  .product-title {
+    display: inline-block;
+    .h3-alt {
+      margin-bottom: 0;
+      @include font-size($font-base-plus);
+      @include breakpoint($size-md) {
+        @include font-size-only($font-medium);
+      }
+    }
+  }
+  .product-price {
+    margin-top: 1rem;
+    // float: right;
+    @include breakpoint($size-sm) {
+      margin-bottom: 1rem;
+      float: none;
+    }
+    .label,
+    .value {
+      @include font-size($font-base-plus);
+      font-weight: bold;
+      @include breakpoint($size-md) {
+        @include font-size-only($font-medium);
+      }
+    }
+  }
+  .product-group__ids {
+    // Hide for now
+    display: none;
+    span {
+      @include font-size($font-tiny);
+    }
+    margin-bottom: .75rem;
+  }
+  .product-description {
+    p,li,span {
+      @include font-size($font-smaller);
+    }
+  }
+  button.js-add-item {
+    @include font-size-only($font-small)
+    color: $color2;
+    background: $color4;
+    border-style: none;
+    border-radius: 6px;
+    padding: .75rem 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    &:hover {
+      background-color: darken($color3, 10%);
+    }
+    @include breakpoint($size-sm, true) {
+      margin-top: 0;
+    }
+  }
+}

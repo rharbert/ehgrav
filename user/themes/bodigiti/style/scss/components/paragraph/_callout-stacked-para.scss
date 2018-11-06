@@ -1,0 +1,72 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Paragraph Callouts Stacked (component)
+////////////////////////////////////////////////////////////////////////////////
+
+.paragraph--callouts-stacked {
+  @include row;
+  margin-top: 64px;
+  margin-top: 4rem;
+  margin-bottom: 64px;
+  margin-bottom: 4rem;
+  .background-gray {
+    background-color: $color6;
+  }
+  .background-blue {
+    background-color: $color3;
+    h3, p {
+      color: $color2;
+    }
+  }
+}
+
+.paragraph--callout-stacked {
+  max-width: 470px;
+  max-width: 29.375rem;
+  margin-bottom: 4rem;
+  margin-right: auto;
+  margin-left: auto;
+  @include breakpoint($l, true) {
+    margin-bottom: 0;
+  }
+  .head img {
+    display: block;
+  }
+  .body {
+    text-align: center;
+    padding: 16px 48px;
+    padding: 1rem 3rem;
+    h3, p {
+      @include line-height($line-height-3);
+      font-weight: $font-weight-regular;
+      margin-top: 0;
+      margin-bottom: .5rem;
+    }
+    h3 {
+      @include font-size-only($font-standard);
+    }
+    p {
+      @include font-size-only($font-base-plus);
+    }
+    @include breakpoint($med, true) {
+      // wait to apply max-height at $med because at small width the text wraps more and can push button down out of callout
+      max-height: 11.875rem;
+    }
+  }
+  .cta-button.small.contained a,
+  .cta-button.small.full-width a {
+    border: 1px solid $color2;
+    font-weight: $font-weight-regular;
+  }
+}
+
+.page-node-type-landing-page .paragraph--callout-stacked {
+  @include breakpoint($l, true) {
+    &:nth-child(odd) {
+      float: left;
+    }
+    &:nth-child(even) {
+      float: right;
+    }
+  }
+}

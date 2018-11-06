@@ -1,0 +1,23 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Paragraph Contact Form (component)
+////////////////////////////////////////////////////////////////////////////////
+
+.paragraph--form-contact .compact-form {
+  padding: 0;
+  background: none;
+  border: none;
+  .compact-form-wrapper {
+    border: none;
+  }
+  .form-textarea {
+    max-height: 125px;
+  }
+  .form-actions {
+    margin-bottom: 0;
+  }
+  .form-submit {
+    background-color: $color7;
+    border: solid 1px white;
+  }
+}
