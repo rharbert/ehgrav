@@ -16,7 +16,7 @@ module:
 module_styles__select:
     - margin-top__sm
     - contain-inner
-media_order: 'accepted-payment-methods-300x34.png,happiness-guarantee.jpg'
+media_order: 'happiness-guarantee.jpg,accepted-payment-methods-300x34.png'
 published: true
 visible: false
 override_default_title: 'Shipping & Returns'
