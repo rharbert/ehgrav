@@ -21,8 +21,8 @@ user/accounts/*
 !user/accounts/.*
 user/data/*
 !user/data/.*
-# user/pages/*
-# !user/pages/.*
+user/pages/*
+!user/pages/.*
 #####################
 # Security.yaml
 user/localhost/config/security.yaml
