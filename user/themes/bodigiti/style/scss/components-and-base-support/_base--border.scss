@@ -31,7 +31,7 @@ $border_width_xs: 1px;
     @include border($border_style_solid, $border_width_xs, $color3);
   }
   &.red {
-    @include border($border_style_solid, $border_width_xs, $color4);
+    @include border($border_style_solid, $border_width_xs, $pink);
   }
 }
 
@@ -47,6 +47,6 @@ $border_width_xs: 1px;
     @include border($border_style_solid, $border_width_xs, $color3);
   }
   &.red {
-    @include border($border_style_solid, $border_width_xs, $color4);
+    @include border($border_style_solid, $border_width_xs, $pink);
   }
 }

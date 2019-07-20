@@ -16,10 +16,10 @@
   }
 }
 %colors-secondary {
-  background: $color4;
+  background: $pink;
   &:hover {
     text-decoration: none;
-    background: lighten($color4, 15%);
+    background: lighten($pink, 15%);
   }
 }
 %button--xs {

@@ -35,7 +35,7 @@
   margin-right: 16px;
   margin-right: .5rem;
   a {
-    color: $color4;
+    color: $pink;
     @include font-size($font-base);
     text-decoration: none;
     &:hover {
@@ -77,7 +77,7 @@
     background-position: 15px center;
   }
   .snipcart-summary {
-    color: $color4;
+    color: $pink;
     height: 100%;
     float: right;
     padding-top: 12px;

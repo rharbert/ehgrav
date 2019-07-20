@@ -64,7 +64,7 @@
         transition: all 0.5s linear 0s;
     }
     .lSSlideOuter .lSPager > li:hover span, .lSSlideOuter .lSPager > li.active span {
-        background-color: $color4;
+        background-color: $pink;
     }
     // End of pager circle icons
     //////////////////////////////////////////////////////////////////////////////
@@ -100,7 +100,7 @@
       &.active,
       &:hover {
         border-radius: 0px; // Override vendor default
-        border-bottom: 3px solid $color4;
+        border-bottom: 3px solid $pink;
       }
     }
     // End of pager thumbnails
