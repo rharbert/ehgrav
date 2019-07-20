@@ -58,7 +58,10 @@ section.logo {
 }
 
 section.logo img {
-  max-width: 90%;
+  max-width: 80%;
+  @include breakpoint($size-lg) {
+    max-width: 45%;
+  }
 }
 
 section.logo p {

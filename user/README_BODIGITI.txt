@@ -1,6 +1,6 @@
 
 /***********************************************
-Minify-HTML Plugin
+Minify-HTML Plugin !
 ***********************************************/
 Minify-HTML breaks Taxonomy page views when grav cache is enabled if minify-html
 settings are too aggressing.
