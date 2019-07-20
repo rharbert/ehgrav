@@ -1,0 +1,167 @@
+////////////////////////////////////////////////////////////////////////////////
+// Classes and Ids
+////////////////////////////////////////////////////////////////////////////////
+.accordion {
+  display: none;
+  p {
+    font-size: 1rem;
+  }
+}
+
+a.expand {
+  cursor: pointer;
+  color: $pink !important;
+  &:hover {
+    color: $gold !important;
+  }
+}
+
+.article {
+  padding: .5rem;
+}
+
+.article-title {
+  margin-top: .75rem;
+  font-size: 1rem;
+  @media only screen and (min-width: $sizeL) {
+    font-size: 1.1rem;
+  }
+}
+
+.article-contents {
+  display: none;
+}
+
+p.collection-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2%;
+}
+
+.collection-contents {
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.expand-icon {
+  margin-left: .5rem;
+  padding: .1rem;
+}
+
+.fa-info-circle {
+  font-size: 1.35rem;
+}
+
+.featured {
+  background: $gray2;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  @media only screen and (min-width: $sizeL) {
+    margin-bottom: 4rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.featured-collection {
+  margin: 0 auto;
+  @media only screen and (min-width: $sizeL) {
+    max-width: 50%;
+  }
+}
+
+#featured.negate.section_header h1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#guarantee {
+  margin-top: 2rem;
+  @media only screen and (min-width: $sizeML) {
+    max-width: 50%;
+    margin-top: 3rem;
+  }
+  img {
+    width: 70%;
+  }
+}
+
+.gold {
+  color: $gold;
+}
+
+#hero-image {
+  margin-top: 4rem;
+  @media only screen and (min-width: $sizeL) {
+      margin-top: 6rem;
+  }
+}
+
+.less-top {
+  margin-top: 0 !important;
+}
+
+#lookbook {
+    max-width: 80%;
+    margin: 0 auto;
+  .col {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  h1 {
+    margin-bottom: 1rem;
+  }
+}
+
+.noLeftPadding {
+  padding-left: 0;
+}
+
+.padded-div {
+  padding: 0 2rem 2rem 1rem;
+}
+
+.quote {
+  font-family: 'Alex Brush';
+  font-size: 2.5rem !important;
+  color: $gold;
+  text-align: center;
+  margin-top: 2rem;
+  @media only screen and (min-width: $sizeL) {
+    font-size: 3rem !important;
+  }
+}
+
+.row-tall {
+  line-height: 3;
+}
+
+.section_header h1 {
+  margin: 2rem 0 .75rem 0;
+  text-align: center;
+  @media only screen and (min-width: $sizeL) {
+    margin: 3rem 0 .75rem 0;
+  }
+}
+
+.shop-img-button {
+  padding: 0;
+}
+
+#status {
+  color: red;
+  font-weight: 600;
+  margin: 1rem 0 1rem 0;
+}
+
+#testimonials {
+  background-color: $gray3;
+  padding: 1rem;
+  margin-top: 1rem;
+  .section_header h1 {
+    margin-top: 1rem;
+  }
+
+}

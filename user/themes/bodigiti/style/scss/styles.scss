@@ -85,7 +85,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 @import "components-and-base-support/base--border";
 @import "components-and-base-support/base--color--background-and-text";
-@import "components-and-base-support/base--font-weight--font-size--override";
+@import "components-and-base-support/base--typography--override";
 @import "components-and-base-support/base--margin-and-padding";
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -103,3 +103,15 @@
 @import "layouts/layout--default";
 @import "layouts/layout--front-page";
 @import "layouts/layout--shop--product";
+
+////////////////////////////////////////////////////////////////////////////////
+// Earring Happiness Specific Styles
+////////////////////////////////////////////////////////////////////////////////
+// @import "earring-happiness/base";
+// @import "earring-happiness/buttons";
+// @import "earring-happiness/cart";
+// @import "earring-happiness/classes-ids";
+// @import "earring-happiness/footer";
+// @import "earring-happiness/header";
+// @import "earring-happiness/products";
+// @import "earring-happiness/variables";

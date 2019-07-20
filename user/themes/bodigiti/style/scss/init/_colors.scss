@@ -1,8 +1,8 @@
 
 $color1: #000; // Black
 $color2: #fff; // White
-$color3: #231F20; // BHBC Dark Gray (Near Black)
-$color4: #CC3333; // Alice Draws Red
+$color3: #231F20; // Dark Gray (Near Black)
+$color4: #CC3333; //Red
 
 $black: black;
 $white: white;
@@ -29,7 +29,7 @@ $superfish-1-background-color-level-third: $color3;
 $superfish-1-background-color-level-fourth: lighten($color3, 15%);
 // End Superfish
 
-$color-link: $color3;
+$color-link: $color4;
 $color-link-1: lighten($color-link, 2.5%);
 $color-link-2: lighten($color-link, 5%);
 $color-link-3: lighten($color-link, 15%);
@@ -37,11 +37,11 @@ $color-link-4: lighten($color-link, 20%);
 $color-link-5: lighten($color-link, 25%);
 $color-link-6: lighten($color-link, 45%);
 
-$color-link-alt: $color4;
-$color-link-alt-1: lighten($color-link-alt, 2.5%);
-$color-link-alt-2: lighten($color-link-alt, 5%);
-$color-link-alt-3: lighten($color-link-alt, 15%);
-$color-link-alt-4: lighten($color-link-alt, 20%);
+// $color-link-alt: $color5;
+// $color-link-alt-1: lighten($color-link-alt, 2.5%);
+// $color-link-alt-2: lighten($color-link-alt, 5%);
+// $color-link-alt-3: lighten($color-link-alt, 15%);
+// $color-link-alt-4: lighten($color-link-alt, 20%);
 
 $color-button-border: $color-link;
 $color-button-border-alt: $color3;

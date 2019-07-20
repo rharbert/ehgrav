@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 480 640" enable-background="new 0 0 480 640" xml:space="preserve">
+<symbol  id="Shopping_Cart" viewBox="-35.3 -31.5 70.5 63">
+	<path fill="#CC6666" d="M31.7-10h-49.3v2.4l45.2,6c2.4,0.4,4.1,2.3,4.2,4.7V18c0,2.5-2,4.5-4.5,4.5h-44.9V26c0,3-2.5,5.5-5.5,5.5
+		h-8.7c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5h7.2v-36c0-3,2.5-5.5,5.5-5.5h50.8c1.9,0,3.5,1.6,3.5,3.5C35.1-11.6,33.6-10,31.7-10z
+		 M2.1,0.1L-6.5-1v18.6h8.6C2.1,17.6,2.1,0.1,2.1,0.1z M6.1,17.6h8.6V1.7L6.1,0.6V17.6z M26.8,3.3l-8.1-1.1v15.3h8.1V3.3z
+		 M-10.5,17.6V-1.6l-7.1-0.9v20.1H-10.5z"/>
+	<path fill="#CC6666" d="M-6.9-31.5c3.8,0,6.9,3.1,6.9,6.9s-3.1,6.9-6.9,6.9s-6.9-3.1-6.9-6.9S-10.8-31.5-6.9-31.5z"/>
+	<path fill="#CC6666" d="M26.5-31.5c3.8,0,6.9,3.1,6.9,6.9s-3.1,6.9-6.9,6.9s-6.9-3.1-6.9-6.9S22.6-31.5,26.5-31.5z"/>
+</symbol>
+<use xlink:href="#Shopping_Cart"  width="70.5" height="63" id="XMLID_3_" x="-35.3" y="-31.5" transform="matrix(5.7124 0 0 -5.7124 230.5755 320)" overflow="visible"/>
+</svg>

@@ -4,14 +4,14 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 a {
-  color: $color4;
+  color: $color3;
   text-decoration: none;
   &:hover {
-    color: $color3;
+    color: $color1;
     text-decoration: underline;
   }
   &.link-important {
-    color: $color4;
+    color: $color1;
   }
 }
 
@@ -22,9 +22,6 @@ a {
 a {
   .black {
     color: $color1;
-  }
-  .red {
-    color: $color4;
   }
 }
 

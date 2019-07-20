@@ -24,15 +24,6 @@ function topFunction() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-////////////////////////////////////////////////////////////////////////////////
-// Coverage Calculator
-////////////////////////////////////////////////////////////////////////////////
-$("#calculate").on("click", function() {
-  var inches = ($("#depth").val() / 12).toFixed(2);
-  var result = $("#length").val() * $("#width").val() * inches;
-  $("#squareFootage").text("You need " + result + " square feet of coverage");
-});
-
 
 ////////////////////////////////////////////////////////////////////////////////
 // jQuery
@@ -40,6 +31,21 @@ $("#calculate").on("click", function() {
 
 jQuery(function($) {
     $('body').removeClass('no-js');
+
+    ////////////////////////////////////////////
+    ////Toggle Accordion Open/Close
+    ////////////////////////////////////////////
+    $(".expand-icon").on("click", function () {
+        $(".accordion").toggle();
+    });
+  
+    ////////////////////////////////////////////
+    ////Toggle Article On
+    ////////////////////////////////////////////
+    $(".expand").on("click", function () {
+        let contents = $(this).parent().siblings(".article-contents").html();
+        $(".article-container").html(contents);
+    });
 
    /////////////////////////////////////////////////////////////////////////////
    // Mobile menu drawer

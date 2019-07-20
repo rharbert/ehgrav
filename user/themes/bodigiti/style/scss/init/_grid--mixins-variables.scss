@@ -3,13 +3,18 @@
 // Responsive Breakpoints
 ////////////////////////////////////////////////////////////////////////////////
 
+$size-xxs: 0px;
 $size-xs: 480px !default;
 $size-sm: 600px !default;
+$size-sm-2: 690px !default; // Jax for Nav Only
 $size-sm-plus: 768px !default;
 $size-md: 840px !default;
 $size-lg: 960px !default;
+$size-lg-plus: 1060px !default; // Jax for Nav Only
 $size-xl: 1200px !default;
 $size-2x: 1440px !default;
+$size-3x: 1920px !default;
+$size-4x: 4000px !default;
 $sidebar-one: 25em; // 25em or 400px
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -17,13 +22,23 @@ $sidebar-one: 25em; // 25em or 400px
 ////////////////////////////////////////////////////////////////////////////////
 
 $row: 68rem; // 68rem or 1,088px
-$row-xl: 90rem; // 90rem or 1,440px
-$row-lg: 75rem; // 75rem or 1,200px
-$row-sm: 52rem; // 50em or 800px
-$row-xs: 34rem; // 24em or 544px
+$row-xs: $size-xs; //30rem or 480px
+$row-sm: $size-sm; //37.5rem or 600px
+$row-sm-plus: $size-sm-plus; //48rem or 768px
+$row-md: $size-md; // 52.5rem or 840px
+$row-lg: $size-lg; // 60rem or 960px
+$row-xl: $size-xl; // 75rem or 1,200px
+$row-2x: $size-2x; // 90rem or 1,440px
+$row-3x: $size-3x; // 120rem or 1,920px
+$row-4x: $size-4x; // 250rem or 4000px
 
 @mixin row { max-width: $row; margin-left: auto; margin-right: auto; }
-@mixin row-xl { max-width: $row-xl; margin-left: auto; margin-right: auto; }
-@mixin row-lg { max-width: $row-lg; margin-left: auto; margin-right: auto; }
-@mixin row-sm { max-width: $row-sm; margin-left: auto; margin-right: auto; }
 @mixin row-xs { max-width: $row-xs; margin-left: auto; margin-right: auto; }
+@mixin row-sm { max-width: $row-sm; margin-left: auto; margin-right: auto; }
+@mixin row-sm-plus { max-width: $row-sm-plus; margin-left: auto; margin-right: auto; }
+@mixin row-md { max-width: $row-md; margin-left: auto; margin-right: auto; }
+@mixin row-lg { max-width: $row-lg; margin-left: auto; margin-right: auto; }
+@mixin row-xl { max-width: $row-xl; margin-left: auto; margin-right: auto; }
+@mixin row-2x { max-width: $row-2x; margin-left: auto; margin-right: auto; }
+@mixin row-3x { max-width: $row-3x; margin-left: auto; margin-right: auto; }
+@mixin row-4x { max-width: $row-4x; margin-left: auto; margin-right: auto; }

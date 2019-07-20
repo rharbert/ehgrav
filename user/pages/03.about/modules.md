@@ -29,7 +29,7 @@ module:
                 module__admin_title_child: 'Written content: What Inspires Alice'
                 module_type: module__text_image
                 text_image__title: '## What Inspires Alice'
-                text_image__textarea: "\"I know I'm young, but I **_have_** been drawing my **whole life**. I draw every day, and I can see how I continue to get better. As far as inspiration, there are a few things that inspire me,\"  Alice explains.\r\n\r\nMore content..."
+                text_image__textarea: '"I know I''m young, but I **_have_** been drawing my **whole life**. I draw every day, and I can see how I continue to get better. As far as inspiration, there are a few things that inspire me,"  Alice explains.'
                 content_inject__url: /portfolio
                 content_inject__type: modules
                 module_styles__select_child:
@@ -41,6 +41,7 @@ module:
                 text_image__alt: 'Portrait of Alice in black sequin dress'
                 text_image__caption: 'Alice''s favorite color is black, and she always wears her glasses'
                 text_image__textarea: ''
+                module_styles__text_child: col-6
                 module_styles__select_child:
                     - margin-left-right__xs-plus
         module_styles__select:
@@ -111,6 +112,6 @@ module:
 media_order: 'alice-draws-studio-1-min.jpg,portrait-alice-magolo-black-sequin-dress-1-min.jpg,painting-alice-magolo-baby-sea-turtles-min.jpg,painting-alice-magolo-jellyfish-min.jpg,painting-alice-magolo-mask-min.jpg,painting-alice-magolo-person-with-no-face-min.jpg'
 published: true
 override_default_title: About
-override_default_desc: 'Alice Magolo is a 14-year old American artist who has been drawing since she was two years old. A bit self-critical and a stickler for fine lines, learn more about her...'
+override_default_desc: 'Alice Magolo is a teenage American artist who has been drawing since she was a baby. Learn more about her...'
 ---
 

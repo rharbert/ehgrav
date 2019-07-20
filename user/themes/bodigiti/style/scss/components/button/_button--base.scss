@@ -9,6 +9,7 @@
   background: $color3;
   text-decoration: none;
   display: inline-block;
+  border: none;
   &:hover {
     text-decoration: none;
     background: lighten($color3, 15%);

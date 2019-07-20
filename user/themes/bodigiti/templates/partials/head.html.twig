@@ -7,15 +7,13 @@
   <meta name="theme-color" content="#231F20"/><!-- Mobile Chrome, Firefox OS and Opera -->
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   {% include 'partials/metadata.html.twig' %}
-  <link rel="icon" type="image/png" href="{{ url('theme://images/favicon-alice-draws-black.png') }}" />
+  <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
   <link rel="canonical" href="{{ page.url(true, true) }}" />
+  
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PD95K5P');</script>
+ 
   <!-- End Google Tag Manager -->
+
 {# 'Register' CSS and optionally categorize into a group #}
 {# For Additional Styles Rendering see bottom of base.html.twig #}
 {# For JS Rendering see bottom of base.html.twig #}
@@ -30,8 +28,10 @@
 {# Render Primary Styles.css #}
 {{ assets.css('top') }}
 {% endblock head %}
-{# Google Font: Poppins #}
+{# Google Fonts #}
 <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
 {# Google reCaptcha #}
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>

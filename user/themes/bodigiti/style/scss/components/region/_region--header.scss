@@ -56,9 +56,11 @@ section.logo {
   margin: 0 auto 1rem auto;
   text-align: center;
 }
+
 section.logo img {
   max-width: 90%;
 }
+
 section.logo p {
   @include breakpoint($size-lg) {
     margin-top: 0;
