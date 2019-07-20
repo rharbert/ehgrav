@@ -12,20 +12,20 @@ div.container.col-md-8 {
 
 .fb-icon {
   max-width: 20%;
-  @media only screen and (min-width: $sizeSM) {
+  @media only screen and (min-width: $size-sm-plus) {
     max-width: 30%;
   }
-  @media only screen and (min-width: $sizeL) {
+  @media only screen and (min-width: $size-xl) {
     max-width: 25%;
   }
 }
 
 .footer {
   margin-top: 2rem;
-  @media only screen and (min-width: $sizeSM) {
+  @media only screen and (min-width: $size-sm-plus) {
     margin-top: 1rem;
   }
-  @media only screen and (min-width: $sizeL) {
+  @media only screen and (min-width: $size-xl) {
     margin-top: 3rem;
   }
   .packaging {
@@ -34,7 +34,7 @@ div.container.col-md-8 {
     padding-bottom: 1rem;
     p {
       margin-bottom: 0;
-      @media only screen and (min-width: $sizeL) {
+      @media only screen and (min-width: $size-xl) {
         padding-left: 30%;
         padding-right: 30%;
       }
@@ -49,10 +49,10 @@ div.container.col-md-8 {
 
 img.footer_img {
   max-width: 50%;
-  @media only screen and (min-width: $sizeSM) {
+  @media only screen and (min-width: $size-sm-plus) {
     max-width: 70%;
   }
-  @media only screen and (min-width: $sizeL) {
+  @media only screen and (min-width: $size-xl) {
     max-width: 45%;
   }
 }
