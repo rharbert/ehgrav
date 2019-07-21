@@ -5,7 +5,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 $border_style_solid: solid;
+$border_style_outset: outset;
 $border_width_xs: 1px;
+$border_width_3: 3px;
 
 @mixin border($style: $borderStyle, $width: $borderWidth, $color: $borderColor) {
   border-style: ($style);
@@ -17,6 +19,12 @@ $border_width_xs: 1px;
   border-top-style: ($style);
   border-width: ($width);
   border-color: ($color);
+}
+
+.border__3 {
+  &.gold {
+    @include border($border_style_outset, $border_width_3, $gold);
+  }
 }
 
 // All Around Border

@@ -38,9 +38,17 @@
   {% endif %}
   {# End Footer_Pre Region: Optional #}
 
+  {# Footer Region 1 #}
+  <aside id="region-footer-1" class="section" role="complementary">
+    {% include 'modules/modules.html.twig' with {'page': page.find('/region-footer-1')} %}
+  </aside>
+  {# End Footer Region 1 #}
+
+  {# Footer Regions 2 and 3 #}
   {% block footer %}
     {% include 'partials/region/footer.html.twig' %}
   {% endblock %}
+  {# End Footer Regions 2 and 3 #}
 </div> <!-- Wrapper: End -->
 
 
