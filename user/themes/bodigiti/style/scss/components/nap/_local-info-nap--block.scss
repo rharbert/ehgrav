@@ -9,7 +9,7 @@
     display: none;
   }
   @include breakpoint($size-md, true) {
-    margin: 3rem 0 3rem 0;
+    margin: 3rem 0 0 0;
     .nap-pipe-break {
       display: inline-block;
     }
@@ -36,6 +36,7 @@
 
 
 #local-info-nap-etc * {
+  font-weight: 200;
   @include breakpoint($size-md, true) {
     text-align: left !important;
   }
