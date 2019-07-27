@@ -36,23 +36,8 @@ form:
                 min: 0
                 required: true
 
-            header.sizes:
-              ordering@: 4
-              type: checkboxes
-              toggleable: true
-              label: Sizes Available
-              default:
-                sm: true
-                md: true
-                lg: true
-              options:
-                sm: S
-                md: M
-                lg: L
-              use: keys
-
             header.out_of_stock:
-              ordering@: 5
+              ordering@: 3
               type: toggle
               toggleable: true
               label: Out of Stock
@@ -69,6 +54,21 @@ form:
                 label: Description
                 validate:
                   type: textarea
+
+            header.sizes:
+              ordering@: 9
+              type: checkboxes
+              toggleable: true
+              label: Sizes Available
+              default:
+                sm: true
+                md: true
+                lg: true
+              options:
+                sm: S
+                md: M
+                lg: L
+              use: keys
 
         slideshow:
             ordering@: 1
