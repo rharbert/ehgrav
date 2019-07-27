@@ -66,10 +66,17 @@
   .product-description {
     p,li,span {
       @include font-size($font-smaller);
+     }
+  }
+  .product-description.other p {
+    margin-bottom: 0;
+    @include breakpoint($size-sm) {
+      margin-top: 0;
+      margin-bottom: 1rem;
     }
   }
   button.js-add-item {
-    @include font-size-only($font-small)
+    @include font-size-only($font-small);
     color: $color2;
     background: $pink;
     border-style: none;

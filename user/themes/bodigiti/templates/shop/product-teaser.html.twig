@@ -10,8 +10,12 @@
             {{ image.cropZoom(360,480).html('', slide.alt, '') }}
           </div>
           <div class="product--header">
-            {% if page.header.product_price %}
-              <div class="product--price">{% if page.header.out_of_stock %}<span style="color: #CD6667;">SOLD</span>{% endif %}&nbsp; ${{ page.header.product_price }}</div>
+            {% if page.header.product_sale_price %}
+              <div class="product--price"><span style="color: #669933;">SALE</span>&nbsp; <span style="color: #669933;">${{ page.header.product_sale_price }}</span></div>
+            {% else %}
+              {% if page.header.product_price %}
+                <div class="product--price">{% if page.header.out_of_stock %}<span style="color: #CD6667;">SOLD</span>{% endif %}&nbsp; ${{ page.header.product_price }}</div>
+              {% endif %}
             {% endif %}
             <div class="product--title">{{ page.title }}</div>
           </div>
