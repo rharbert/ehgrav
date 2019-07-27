@@ -33,7 +33,7 @@ form:
               description: 'Do not include $ as it is applied automatically.'
               validate:
                 type: number
-                min: 1
+                min: 0
                 required: true
 
             header.sizes:

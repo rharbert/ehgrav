@@ -11,7 +11,7 @@
           </div>
           <div class="product--header">
             {% if page.header.product_price %}
-              <div class="product--price">${{ page.header.product_price }}</div>
+              <div class="product--price">{% if page.header.out_of_stock %}<span style="color: #CD6667;">SOLD</span>{% endif %}&nbsp; ${{ page.header.product_price }}</div>
             {% endif %}
             <div class="product--title">{{ page.title }}</div>
           </div>
