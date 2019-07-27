@@ -36,8 +36,20 @@ form:
                 min: 0
                 required: true
 
-            header.out_of_stock:
+            header.product_sale_price:
               ordering@: 3
+              type: text
+              autofocus: true
+              style: vertical
+              label: Sale Price
+              description: 'Do not include $ as it is applied automatically.'
+              validate:
+                type: number
+                min: 0
+                required: false
+
+            header.out_of_stock:
+              ordering@: 4
               type: toggle
               toggleable: true
               label: Out of Stock

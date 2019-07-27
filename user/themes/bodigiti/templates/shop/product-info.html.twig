@@ -19,8 +19,14 @@
 
       {# Price #}
       <div class="product-price">
-        <span class="label">$</span>
-        <span class="value">{{ page.header.product_price }}</span>
+        {% if page.header.product_sale_price %}
+          <span class="sale">
+            <span class="value">$&nbsp;{{ page.header.product_sale_price }}</span>
+          </span>
+        {% endif %}
+        <span class="regular {% if page.header.product_sale_price %}price{% endif %}">
+          <span class="value">$&nbsp;{{ page.header.product_price }}</span>
+        </span>
       </div>
     </div>
     {# End Title + Price #}

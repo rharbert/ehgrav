@@ -34,12 +34,24 @@
       margin-bottom: 1rem;
       float: none;
     }
-    .label,
     .value {
       @include font-size($font-base-plus);
       font-weight: bold;
       @include breakpoint($size-md) {
         @include font-size-only($font-medium);
+      }
+    }
+    .sale {
+      .value {
+        color: $pink;
+      }
+    }
+    .regular.price {
+      .value {
+        @include font-size($font-smaller);
+        text-decoration: line-through;
+        margin-left: .5rem;
+        vertical-align: text-bottom;
       }
     }
   }
