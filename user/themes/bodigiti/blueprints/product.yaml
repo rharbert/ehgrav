@@ -37,7 +37,7 @@ form:
                 required: true
 
             header.sizes:
-              ordering@: 3
+              ordering@: 4
               type: checkboxes
               toggleable: true
               label: Sizes Available
@@ -52,7 +52,7 @@ form:
               use: keys
 
             header.out_of_stock:
-              ordering@: 4
+              ordering@: 5
               type: toggle
               toggleable: true
               label: Out of Stock

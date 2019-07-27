@@ -35,16 +35,12 @@
       </div>
     </div>
 
-
     {# Product Description, Size, Add-to-cart #}
     <div class="product-group__describe-price">
 
-      {# Description #}
-      <div class="product-description">
-        {# Textbox Markdown Field #}
-        {% block content %}
-          {{ page.content }}
-        {% endblock %}
+      {# Product Other #}
+      <div class="product-description other">
+        <p>Only 1 pair available</p>
       </div>
 
       {#########################################################################
@@ -98,6 +94,14 @@
        ########################################################################}
     </div>{## End Product Description, Size, Add-to-cart #}
 
+    {# Description #}
+    <div class="product-description">
+      {# Textbox Markdown Field #}
+      <div><p>Description</p></div>
+      {% block content %}
+        {{ page.content }}
+      {% endblock %}
+    </div>
 
     {# Region: Product Details Default #}
     <div class="product-description">
