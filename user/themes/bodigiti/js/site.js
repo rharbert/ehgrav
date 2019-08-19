@@ -33,6 +33,13 @@ jQuery(function($) {
     $('body').removeClass('no-js');
 
     ////////////////////////////////////////////
+    ////Remove "Only 1 pair available" when item SOLD
+    ////////////////////////////////////////////
+    if ($(".out-of-stock").length) {
+        $(".other").hide();
+    }; 
+
+    ////////////////////////////////////////////
     ////Toggle Accordion Open/Close
     ////////////////////////////////////////////
     $(".expand-icon").on("click", function () {
