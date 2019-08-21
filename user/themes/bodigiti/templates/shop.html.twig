@@ -24,7 +24,7 @@
         {# Shop-list Include #}
         <div class="product-teasers clearfix" id="all-products">
         {# Filter #}
-        <div style="text-align: left; font-size: .8rem; font-weight: 300;">&nbsp;&nbsp;&nbsp;Filter:&nbsp;&nbsp;<span id="on-sale"><a>Sale Only</a></span>&nbsp;&nbsp;<span id="show-all"><a>Show All</a></span></div>
+        {# <div style="text-align: left; font-size: .8rem; font-weight: 300;">&nbsp;&nbsp;&nbsp;Filter:&nbsp;&nbsp;<span id="on-sale"><a>Sale Only</a></span>&nbsp;&nbsp;<span id="show-all"><a>Show All</a></span></div> #}
         {% for child in collection %}
           {% include 'shop/product-teaser.html.twig' with {shop: page, page: child} %}
         {% endfor %}
