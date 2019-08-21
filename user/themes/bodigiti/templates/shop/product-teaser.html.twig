@@ -7,7 +7,7 @@
         <div class="product--info">
           <div class="product--image">
             {% set image = page.media.images[slide.image] %}
-            {{ image.cropZoom(360,480).html('', slide.alt, '') }}
+            {{ image.cropZoom(480,480).html('', slide.alt, '') }}
           </div>
           <div class="product--header">
             {% if page.header.product_sale_price %}

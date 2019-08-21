@@ -35,8 +35,8 @@ jQuery(function($) {
     /////////////////////////////////////////////////////
     ////Remove "Only 1 pair available" when item is SOLD
     /////////////////////////////////////////////////////
-    if ($(".out-of-stock").length) {
-        $(".other").hide();
+    if ($(".out-of-stock.product-description p").length) {
+        $(".product-description.other").hide();
     }; 
 
     /////////////////////////////////////////////////////
