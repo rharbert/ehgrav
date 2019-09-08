@@ -11,10 +11,16 @@
           </div>
           <div class="product--header">
             {% if page.header.product_sale_price %}
-              <div class="product--price"><span style="color: #CD6667; font-size:1.1rem;">SALE</span>&nbsp; <span class="on-sale" style="color: #CD6667;">${{ page.header.product_sale_price }}</span></div>
+              {% if page.header.out_of_stock %}
+                <div class="product--price"><span style="">SOLD</span>&nbsp;<span class="on-sale" style="">${{ page.header.product_sale_price }}</span></div>
+              {% else %}
+                <div class="product--price"><span style="color: #CD6667;">SALE</span>&nbsp;<span class="on-sale" style="color: #CD6667;">${{ page.header.product_sale_price }}</span></div>
+              {% endif %}
             {% else %}
-              {% if page.header.product_price %}
-                <div class="product--price">{% if page.header.out_of_stock %}<span style="color: #669933;">SOLD</span>{% endif %}&nbsp;${{ page.header.product_price }}</div>
+              {% if page.header.out_of_stock %}
+                <div class="product--price"><span style="">SOLD</span>&nbsp;<span class="" style="">${{ page.header.product_price }}</span></div>
+              {% else %}
+                <div class="product--price">${{ page.header.product_price }}</div>
               {% endif %}
             {% endif %}
             <div class="product--title">{{ page.title }}</div>
