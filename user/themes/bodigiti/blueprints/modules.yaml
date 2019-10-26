@@ -179,14 +179,14 @@ form:
                       multiple: true
                       data-options@: '\Grav\Theme\Bodigiti::styleSelect'
 
-                    .module_isotope:
-                      type: toggle
-                      style: horizontal
-                      label: Isotope Grid
-                      default: 0
-                      options:
-                        1: 'Yes'
-                        0: 'No'
+                    # .module_isotope:
+                    #   type: toggle
+                    #   style: horizontal
+                    #   label: Isotope Grid
+                    #   default: 0
+                    #   options:
+                    #     1: 'Yes'
+                    #     0: 'No'
 
                     .module_published:
                       type: toggle
