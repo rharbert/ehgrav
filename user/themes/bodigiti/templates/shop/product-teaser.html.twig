@@ -7,7 +7,10 @@
         <div class="product--info">
           <div class="product--image">
             {% set image = page.media.images[slide.image] %}
-            {{ image.cropZoom(480,480).html('', slide.alt, '') }}
+            <picture>
+              <source data-srcset="{{ image.cropZoom(240,240).url }}" media="--sm">
+              <img src="/user/themes/bodigiti/images/image-loading-600x600.gif" data-src="{{ image.cropZoom(380,380).url }}" class="lazyload" alt="{{slide.alt}}">
+            </picture>
           </div>
           <div class="product--header">
             {% if page.header.product_sale_price %}
