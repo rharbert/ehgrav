@@ -1,12 +1,1 @@
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  #snipcart-wrapper {
-    padding-top: 12px;
-    padding-bottom: 12px; }
-  .snipcart-cart-and-count .snipcart-cart {
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: -50px center; }
-  .snipcart-cart-and-count .snipcart-summary {
-    padding: 0 15px 0 0; }
-  .sidebar img {
-    width: 100%; } }
+@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){#snipcart-wrapper{padding-top:12px;padding-bottom:12px}.snipcart-cart-and-count .snipcart-cart{background-size:auto;background-repeat:no-repeat;background-position:-50px center}.snipcart-cart-and-count .snipcart-summary{padding:0 15px 0 0}.sidebar img{width:100%}}

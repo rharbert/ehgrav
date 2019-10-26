@@ -1,16 +1,1 @@
-.snip-layout .snip-product__thumbnail {
-  display: block;
-  width: 120px;
-  height: auto; }
-
-#snipcart-footer {
-  display: none; }
-
-.snip-layout .snip-header__title {
-  font-size: 14px;
-  color: #fff;
-  left: 1.25em;
-  line-height: 105px; }
-
-.snip-layout #snipcart-amount {
-  color: #fff; }
+.snip-layout .snip-product__thumbnail{display:block;width:120px;height:auto}#snipcart-footer{display:none}.snip-layout .snip-header__title{font-size:14px;color:#fff;left:1.25em;line-height:105px}.snip-layout #snipcart-amount{color:#fff}
