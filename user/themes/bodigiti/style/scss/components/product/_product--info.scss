@@ -63,6 +63,18 @@
     }
     margin-bottom: .75rem;
   }
+  .out-of-stock {
+    border-bottom: 1px solid #d6d6d6;
+    #sold {
+      color: #B20F0F;
+      font-weight: $font-weight-bold;
+      @include font-size($font-standard);
+      padding: .75rem;
+      background-color: $gray3;
+      border-radius: 6px;
+      text-align: center;
+    }
+  }
   .product-description {
     p,li,span {
       @include font-size($font-smaller);
