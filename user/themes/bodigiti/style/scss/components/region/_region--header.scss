@@ -60,7 +60,10 @@ section.logo {
     align-items: flex-start;
   }  
   img {
-    max-width: 80%;
+    max-width: 70%;
+    @include breakpoint($size-lg) {
+      max-width: 80%;
+    }
    }
   a  {
     text-align: left;

@@ -19,7 +19,7 @@
   #main-content {
     @include row;
     @include breakpoint($size-lg) {
-      margin-top: 3rem;
+      // margin-top: 3rem;
     }
   }
   //
