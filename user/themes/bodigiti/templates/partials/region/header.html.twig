@@ -8,7 +8,9 @@
               </div>
             </a>
             {% block header_login_and_cart %}
+              <div class="snipcart-wrapper snipmobile">
                 {% include 'shop/cart.html.twig' %}
+              </div>
             {% endblock %}
           </section>
           <nav class="logo-and-nav menu-default">
@@ -22,6 +24,11 @@
               <ul class="menu-list">
                 {% include 'partials/navigation.html.twig' %}
               </ul>
+              {% block header_login_and_cart_for_menu %}
+                <div class="snipcart-wrapper snipdesktop">
+                  {% include 'shop/cart.html.twig' %}
+                </div>
+              {% endblock %}
             {% endblock %}
           </nav>
           {% if config.plugins.login.enabled and grav.user.username %}

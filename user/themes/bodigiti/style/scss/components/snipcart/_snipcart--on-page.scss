@@ -3,13 +3,26 @@
 // Snipcart on-page snipcart-related (snipcart component)
 ////////////////////////////////////////////////////////////////////////////////
 
-#snipcart-wrapper {
+.snipcart-wrapper {
   height: 48px;
   height: 3rem;
-  position: absolute;
-  top: 0;
-  right: 0;
   z-index: 9;
+  &.snipmobile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include breakpoint($size-lg) {
+      display: none;
+    }
+  }
+  &.snipdesktop {
+    @include breakpoint($size-lg) {
+      // padding-left: 1rem;
+    }
+    @include breakpoint($size-2x) {
+      // margin: 7.75rem 28rem 0 0;
+    }
+  }
   &:hover {
     text-decoration: none;
     // background-color: $color3;
@@ -18,12 +31,6 @@
   &.cart-not-empty {
     // background-color: $color3;
     // background-color: rgba(0, 0, 0, 0.8);
-  }
-  @include breakpoint($size-lg) {
-    padding-left: 1rem;
-  }
-  @include breakpoint($size-2x) {
-    margin: 7.75rem 28rem 0 0;
   }
 }
 
