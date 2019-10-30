@@ -9,23 +9,22 @@
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 700;
+  z-index: 9;
   &:hover {
     text-decoration: none;
     // background-color: $color3;
     // background-color: rgba(0, 0, 0, 0.8);
   }
   &.cart-not-empty {
-    // background-color: $color3;
-    // background-color: rgba(0, 0, 0, 0.8);
-  }
-  @include breakpoint($size-lg) {
-    padding-left: 1rem;
-  }
-  @include breakpoint($size-2x) {
-    margin: 7.75rem 28rem 0 0;
+    @include breakpoint($size-lg) {
+      padding-left: 1rem;
+    }
+    @include breakpoint($size-2x) {
+      margin: 7.75rem 28rem 0 0;
+    }
   }
 }
+
 //
 // Account/Login
 //
@@ -50,6 +49,7 @@
     padding-top: .75rem;
   }
 }
+
 //
 // Button: Cart & Cart Items Count
 //
@@ -61,7 +61,7 @@
   width: 8.125rem;
   a {
     text-decoration: none;
-    @include font-size($font-base);
+    @include font-size($font-tiny-plus);
   }
   .snipcart-cart {
     //
