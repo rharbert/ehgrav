@@ -19,7 +19,7 @@
 {# For JS Rendering see bottom of base.html.twig #}
 {% block stylesheets %}
   {% do assets.addCss('theme://style/css/styles.css', {group:'top'}) %}
-  {% do assets.addCss('https://cdn.snipcart.com/themes/v3.0.1/default/snipcart.css', {group:'snipcart-vendor'}) %}
+  {% do assets.addCss('https://cdn.snipcart.com/themes/v3.0.2/default/snipcart.css', {group:'snipcart-vendor'}) %}
   {% do assets.addCss('theme://style/css/snipcart-modal.css', 108) %}
   {% if browser.getBrowser == 'msie' and browser.getVersion >= 10 %}
       {% do assets.addCss('theme://style/css/ie10-plus.css') %}
