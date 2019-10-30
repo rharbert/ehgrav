@@ -16,12 +16,14 @@
     // background-color: rgba(0, 0, 0, 0.8);
   }
   &.cart-not-empty {
-    @include breakpoint($size-lg) {
-      padding-left: 1rem;
-    }
-    @include breakpoint($size-2x) {
-      margin: 7.75rem 28rem 0 0;
-    }
+    // background-color: $color3;
+    // background-color: rgba(0, 0, 0, 0.8);
+  }
+  @include breakpoint($size-lg) {
+    padding-left: 1rem;
+  }
+  @include breakpoint($size-2x) {
+    margin: 7.75rem 28rem 0 0;
   }
 }
 
