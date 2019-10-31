@@ -20,23 +20,33 @@
   left: 1.25em;
   line-height: 105px;
 }
+
+.snipcart-modal__close-title {
+  display: inline;
+}
+
 // Subtotal
 .snip-layout #snipcart-amount {
   color: $color2;
 }
 
-//Buttons
+//Payment, last 4 digits of credit card
+.snipcart__card__icon {
+  display: none;
+}
+
+//Buttons, change colors to match branding
 .snipcart-cart-button--highlight,
 .snipcart__box--badge-highlight {
   background-image: linear-gradient(90deg,#B20F0F,#CD6667);
 }
 
-//Continue shopping arrow path
+//Continue shopping arrow path, change from blue to red
 .snipcart__icon--blue-light path {
   fill: #B20F0F;
 }
 
-//Invoice #
+//Invoice #, changed to match branding
 .snipcart-order__invoice-number--highlight {
   color: #CD6667;
 }
