@@ -24,3 +24,19 @@
 .snip-layout #snipcart-amount {
   color: $color2;
 }
+
+//Buttons
+.snipcart-cart-button--highlight,
+.snipcart__box--badge-highlight {
+  background-image: linear-gradient(90deg,#B20F0F,#CD6667);
+}
+
+//Continue shopping arrow path
+.snipcart__icon--blue-light path {
+  fill: #B20F0F;
+}
+
+//Invoice #
+.snipcart-order__invoice-number--highlight {
+  color: #CD6667;
+}
