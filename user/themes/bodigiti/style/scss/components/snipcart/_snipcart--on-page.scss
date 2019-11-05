@@ -5,7 +5,7 @@
 
 .snipcart-wrapper {
   height: 48px;
-  height: 3rem;
+  // height: 3rem;
   z-index: 9;
   &.snipmobile {
     position: absolute;
@@ -74,7 +74,7 @@
   float: left;
   height: 100%;
   width: 130px;
-  width: 8.125rem;
+  width: 9.5rem;
   a {
     text-decoration: none;
     @include font-size($font-tiny-plus);
