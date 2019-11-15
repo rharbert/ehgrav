@@ -10,14 +10,14 @@ document.addEventListener("snipcart.ready", function() {
    * --------------------------------------------------------------------------
    */
 
-  var updateHeader = function(){
-    if(Snipcart.api.items.count() !== 0){
-      $('#snipcart-wrapper').addClass('cart-not-empty');
-    }
-    else {
-      $('#snipcart-wrapper').removeClass('cart-not-empty');
-    }
-  }
+  // var updateHeader = function(){
+  //   if(Snipcart.api.items.count() !== 0){
+  //     $('#snipcart-wrapper').addClass('cart-not-empty');
+  //   }
+  //   else {
+  //     $('#snipcart-wrapper').removeClass('cart-not-empty');
+  //   }
+  // }
   Snipcart.subscribe('item.removed', function (item) {
       updateHeader();
   });
