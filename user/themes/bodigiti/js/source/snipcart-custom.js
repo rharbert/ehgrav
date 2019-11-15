@@ -33,39 +33,39 @@ document.addEventListener("snipcart.ready", function() {
 
   // Size Chooser + Error Message Hide if none selected (message shown based
   // on button click below) */
-  $('#size-chooser').on("change", function(){
-    // If select <option> .size class exists then add class 'active' and hide error message
-    $(this).find('option.size:selected').addClass('active')
-      .siblings('option').removeClass('active'),
-      $('.error-message').fadeOut('fast').removeClass('active');
-    // If select <option> .default then add no class ''
-    $(this).find('option.default:selected').addClass('')
-      .siblings('option').removeClass('active');
-  });
+  // $('#size-chooser').on("change", function(){
+  //   // If select <option> .size class exists then add class 'active' and hide error message
+  //   $(this).find('option.size:selected').addClass('active')
+  //     .siblings('option').removeClass('active'),
+  //     $('.error-message').fadeOut('fast').removeClass('active');
+  //   // If select <option> .default then add no class ''
+  //   $(this).find('option.default:selected').addClass('')
+  //     .siblings('option').removeClass('active');
+  // });
 
-  // Button add-to-cart: if a size is selected add class 'snipcart..'
-  // which allows adding to cart
-  // Button + Size: validate size option was selected or throw alert
-  $("#add-to-cart").on("click", function(e){
-    /* if */
-    $("#size-chooser").length ?
-      /* if / else */
-      $(".sizes option.active").length ? $(this).addClass("snipcart-add-item") : (e.preventDefault(),
-        $(this).removeClass("snipcart-add-item"), /* 'else' continued */
-        $(".error-message").fadeIn("fast").addClass("active")) /* 'else' end */
-    /* else */
-    : $(this).addClass("snipcart-add-item");
-  });
+  // // Button add-to-cart: if a size is selected add class 'snipcart..'
+  // // which allows adding to cart
+  // // Button + Size: validate size option was selected or throw alert
+  // $("#add-to-cart").on("click", function(e){
+  //   /* if */
+  //   $("#size-chooser").length ?
+  //     /* if / else */
+  //     $(".sizes option.active").length ? $(this).addClass("snipcart-add-item") : (e.preventDefault(),
+  //       $(this).removeClass("snipcart-add-item"), /* 'else' continued */
+  //       $(".error-message").fadeIn("fast").addClass("active")) /* 'else' end */
+  //   /* else */
+  //   : $(this).addClass("snipcart-add-item");
+  // });
 
 
-  /**
-   * Size: add selected to popup, by adding attribute "item-custom1-value" to <button>
-   * --------------------------------------------------------------------------
-   */
+  // /**
+  //  * Size: add selected to popup, by adding attribute "item-custom1-value" to <button>
+  //  * --------------------------------------------------------------------------
+  //  */
 
-  $('#size-chooser').on("change", function() {
-    $('button').data('item-custom1-value', $(this).val());
-  });
+  // $('#size-chooser').on("change", function() {
+  //   $('button').data('item-custom1-value', $(this).val());
+  // });
 
   /**
    * Popup Continue Shopping button: show it
