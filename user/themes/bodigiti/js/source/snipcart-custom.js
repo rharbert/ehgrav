@@ -10,20 +10,20 @@ document.addEventListener("snipcart.ready", function() {
    * --------------------------------------------------------------------------
    */
 
-  Snipcart.subscribe('item.removed', function (item) {
-      updateHeader();
-  });
-  Snipcart.subscribe('item.added', function (item) {
-      updateHeader();
-  });
-  updateHeader();
+  // Snipcart.subscribe('item.removed', function (item) {
+  //     updateHeader();
+  // });
+  // Snipcart.subscribe('item.added', function (item) {
+  //     updateHeader();
+  // });
+  // updateHeader();
 
   /**
    * Popup Continue Shopping button: show it
    * --------------------------------------------------------------------------
    */
 
-  Snipcart.execute('config', 'show_continue_shopping', true);
+  // Snipcart.execute('config', 'show_continue_shopping', true);
 
   /**
    * Popup Close on mouse-click outside of the popup
