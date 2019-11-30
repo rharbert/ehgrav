@@ -1,4 +1,5 @@
 # Bodigiti Gitignore
+.vscode/*
 
 # Composer
 .composer
