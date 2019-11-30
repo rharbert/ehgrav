@@ -25,6 +25,9 @@ $border_width_3: 3px;
   &.gold {
     @include border($border_style_outset, $border_width_3, $gold);
   }
+  &.pink {
+    @include border($border_style_outset, $border_width_3, $pink);
+  }
 }
 
 // All Around Border

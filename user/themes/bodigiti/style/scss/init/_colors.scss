@@ -5,10 +5,12 @@ $color3: #231F20; // Dark Gray (Near Black)
 $color4: #CC3333; //Red
 $color5: #CC9933; //EH gold
 
+
 ////////////////////////////////////////////////////////////////////////////////
 // Earring Happiness colors
 ////////////////////////////////////////////////////////////////////////////////
 $pink: #CC6666;
+$color6: lighten($pink, 35%);
 $gold: #CC9933;
 $olive: #669933;
 // End Earring Happiness colors
