@@ -25,6 +25,9 @@
       @include breakpoint($size-md) {
         @include font-size-only($font-medium);
       }
+      @include breakpoint($size-md) {
+        margin-top: 0;
+      }
     }
   }
   .product-price {

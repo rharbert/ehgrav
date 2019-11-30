@@ -8,9 +8,11 @@
   font-weight: $font-weight-light;
   width: 100%;
   // margin-bottom: 0.75rem;
+  @include breakpoint($size-md) {
+    margin-bottom: 2rem;
+  }
   @include breakpoint($size-lg) {
     padding-top: 1rem;
-    // margin-bottom: 1.5rem;
   }
   .header-inner {
     nav {
