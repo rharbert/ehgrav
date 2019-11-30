@@ -17,6 +17,8 @@ $font-weight-bold: 700;
 //
 // Font Size + Line Height
 //
+// CSS selectors are created like this: font-size-tiny, font-size-base 
+//   they are: 'font-size-{ plus the size name }
 $font-factor: 1.10;
 $font-tiny: 9.008 * $font-factor; // 9.008px or 0.563rem (at font-factor 1.0 )
 $font-tiny-plus: 12 * $font-factor; // 12px or 0.75rem (at font-factor 1.0 )
