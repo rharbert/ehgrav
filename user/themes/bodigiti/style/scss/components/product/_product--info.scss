@@ -5,6 +5,9 @@
 
 .product-group-wrapper {
   margin: 0 0 6rem 0;
+  @include breakpoint($size-sm, true) {
+    padding-top: 2rem;
+  }
   .product-group__image {
     @include breakpoint($size-sm, true) {
       @include span(15 at 1 of 24);
@@ -22,6 +25,9 @@
     .h3-alt {
       margin-bottom: 0;
       @include font-size($font-base-plus);
+      @include breakpoint($size-sm, true) {
+        margin: 0;
+      }
       @include breakpoint($size-md) {
         @include font-size-only($font-medium);
       }

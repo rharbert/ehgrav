@@ -1,7 +1,7 @@
 <header class="header clearfix" role="banner">
-    <section class="u-container-lg {{ grid_size }}">
-        <section class="header-inner">
-          <section class="hamburger-and-cart">
+    <section class="u-container-lg clearfix">
+        <section class="header-inner clearfix">
+          <section class="hamburger-and-cart__mobile">
             <a href="#" class="hamburger u-visible-mobile js-toggle-menu">
               <div class="hamburger-box">
                 <div class="hamburger-inner"></div>
@@ -13,24 +13,27 @@
               </div>
             {% endblock %}
           </section>
-          <nav class="logo-and-nav menu-default">
-              <section class="logo">
-                <a href="{{ home_url }}" class="navbar-brand mr-10 text-decoration--none">
-                <img src="/user/themes/bodigiti/images/logo-earring-happiness-min.png"/>
-                </a>
-              <section>
-
+          <section class="logo-nav-cart menu-default clearfix">
+            <div class="logo">
+              <a href="{{ home_url }}" class="navbar-brand mr-10 text-decoration--none">
+              <img src="/user/themes/bodigiti/images/logo-earring-happiness-min.png"/>
+              </a>
+            </div>
             {% block header_navigation %}
-              <ul class="menu-list">
-                {% include 'partials/navigation.html.twig' %}
-              </ul>
+            <section class="nav-and-cart">
+              <nav>
+                <ul class="menu-list">
+                  {% include 'partials/navigation.html.twig' %}
+                </ul>
+              </nav>
               {% block header_login_and_cart_for_menu %}
                 <div class="snipcart-wrapper snipdesktop">
                   {% include 'shop/cart.html.twig' %}
                 </div>
               {% endblock %}
+            </nav>
             {% endblock %}
-          </nav>
+          </section>
           {% if config.plugins.login.enabled and grav.user.username %}
             <span class="login-status-wrapper"><i class="fa fa-user"></i> {% include 'partials/login-status.html.twig' %}</span>
           {% endif %}

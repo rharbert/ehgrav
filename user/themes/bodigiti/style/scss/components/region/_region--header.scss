@@ -3,27 +3,21 @@
 // Header (region component)
 ////////////////////////////////////////////////////////////////////////////////
 
+//
+// Header
 .header {
-  border-bottom: none;
   font-weight: $font-weight-light;
   width: 100%;
-  // margin-bottom: 0.75rem;
-  @include breakpoint($size-md) {
-    margin-bottom: 2rem;
-  }
-  @include breakpoint($size-lg) {
-    padding-top: 1rem;
-  }
-  .header-inner {
-    nav {
-      margin: 0 auto;
-      max-width: 1000px;
-    }
-  }
-  .hamburger-and-cart {
+}
+
+//
+// Header Inner
+.header-inner {
+  border-bottom: 1px solid $gray5;
+  // Mobile
+  .hamburger-and-cart__mobile {
     background: $color3;
     height: 3rem;
-    padding-bottom: .75rem;
     @include breakpoint($size-lg) {
       background: none;
       float: right;
@@ -34,56 +28,62 @@
       background: none;
       float: none;
     }
-  }
-  .hamburger {
-    padding: .9rem;
-    @include breakpoint($size-lg) {
-      display: none;
+    .hamburger {
+      padding: .9rem 0 0 .9rem;
+      @include breakpoint($size-lg) {
+        display: none;
+      }
+    }
+    .hamburger-inner {
+      @include breakpoint($size-lg) {
+        display: none;
+      }
     }
   }
-  .hamburger-inner {
-    @include breakpoint($size-lg) {
-      display: none;
+  // Wide
+  .logo-nav-cart {
+    margin: 0 auto;
+    padding: .25rem 0 .5rem 0;
+    max-width: 1000px;
+    // Logo //
+    .logo {
+      display: block;
+      max-width: 70%;
+      margin: 0 auto; // center 
+      @include breakpoint($size-sm-2) {
+        max-width: 50%;
+      }
+      @include breakpoint($size-lg) {
+        // set width using susy grids
+        @include span(4 at 2 of 10);
+      }
+      a  {
+        display: block;
+      }
     }
-  }
-  .hamburger.is-active ~ .logo-and-nav {
-    margin-top: 2.8em;
+    // Nav-and-Cart //
+    .nav-and-cart {
+      // center the cart-and-count
+      .snipcart-cart-and-count {
+        display: inline-block;
+      }
+      @include breakpoint($size-lg) {
+        padding-top: .5rem;
+        // set width using susy grids
+        @include span(4 at 7 of 10);
+      }
+    }
   }
 }
+
+//
+// Header Misc
 .header-transparent .header:not(.scrolled) {
     background: none;
 }
 
-section.logo {
-  // margin: 0 auto 1rem auto;
-  text-align: center;
-  @include breakpoint($size-lg) {
-    display: flex;
-    align-items: flex-start;
-  }  
-  img {
-    max-width: 70%;
-    @include breakpoint($size-lg) {
-      max-width: 80%;
-    }
-   }
-  a  {
-    text-align: left;
-  }
-  p {
-    @include breakpoint($size-lg) {
-      margin-top: 0;
-    }
-  }
+//
+// Hamburger Active 
+.hamburger.is-active ~ .logo-nav-cart {
+  margin-top: 2.8em;
 }
-
-// section.logo img {
-//   max-width: 80%;
-//   @include breakpoint($size-lg) {
-//     max-width: 100%;
-//   }
-// }
-
-// section.logo p {
-  
-// }

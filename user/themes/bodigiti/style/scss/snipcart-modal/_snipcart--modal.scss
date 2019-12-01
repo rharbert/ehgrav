@@ -1,52 +1,56 @@
 
 ////////////////////////////////////////////////////////////////////////////////
-// Snipcart: Modal (snipcart component)
+// Snipcart V3: Modal
+// All styles verified are applying to V3 of snipcart
 ////////////////////////////////////////////////////////////////////////////////
 
-// Thumbnail image
-.snip-layout .snip-product__thumbnail {
-  display: block; // snipcart default is display non until larger breakpoint
-  width: 120px;
-  height: auto;
+// Snipcart Item - individual product component
+.snipcart-item-line {
+  padding: 32px 12px;
+  // Thumbnail image
+  .snipcart-item-line__media--small {
+    min-width: 40%;
+    height: 120px;
+  }
+  // Product Title
+  .snipcart-item-line__title {
+    line-height: 1.5rem;
+    @include breakpoint(0px) {
+      padding-left: 10px;
+    }
+    @include breakpoint(360px) {
+      padding-left: 0px;
+    }
+  }
 }
-// Powered by Snipcart
-#snipcart-footer {
+
+// Secured by Snipcart
+.snipcart-payment-methods__title {
   display: none;
 }
-// Title areas "My Cart"
-.snip-layout .snip-header__title {
-  font-size: 14px;
-  color: $color2;
-  left: 1.25em;
-  line-height: 105px;
-}
 
+// Continue Shopping: Title
 .snipcart-modal__close-title {
   display: inline;
+  font-weight: bold;
+}
+// Continue Shopping: Arrow <path> change from blue to red
+.snipcart__icon--blue-light path {
+  fill: #B20F0F;
 }
 
-// Subtotal
-.snip-layout #snipcart-amount {
-  color: $color2;
-}
-
-//Payment, last 4 digits of credit card
+// Payment, last 4 digits of credit card
 .snipcart__card__icon {
   display: none;
 }
 
-//Buttons, change colors to match branding
+// Buttons, change colors to match branding
 .snipcart-cart-button--highlight,
 .snipcart__box--badge-highlight {
   background-image: linear-gradient(90deg,#B20F0F,#CD6667);
 }
 
-//Continue shopping arrow path, change from blue to red
-.snipcart__icon--blue-light path {
-  fill: #B20F0F;
-}
-
-//Invoice #, changed to match branding
+// Invoice #, changed to match branding
 .snipcart-order__invoice-number--highlight {
   color: #CD6667;
 }

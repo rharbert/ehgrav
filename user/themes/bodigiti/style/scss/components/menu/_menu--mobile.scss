@@ -4,84 +4,84 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 .mobile-nav {
-    border-bottom: 1px solid #e6e6e6;
-    font-family: "Helvetica Neue", sans-serif;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  border-bottom: 1px solid #e6e6e6;
+  font-family: "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .mobile-nav li {
-    margin: 0;
+  margin: 0;
 }
 
 .mobile-nav a {
-    padding: 1em 1.5em;
-    text-decoration: none;
-    color: #111;
-    display: block;
-    border-top: 1px solid #e6e6e6;
-    position: relative;
-    line-height: 1.2;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  color: #111;
+  display: block;
+  border-top: 1px solid #e6e6e6;
+  position: relative;
+  line-height: 1.2;
 }
 
 .mobile-nav a:hover,
 .mobile-nav li:hover {
-    background-color: #f6f6f6;
+  background-color: #f6f6f6;
 }
 
 .mobile-nav a:focus {
-    outline: 0;
+  outline: 0;
 }
 
 .mobile-nav li.current_page_item > a,
 .mobile-nav li.current_page_parent > a {
-    font-weight: bold;
+  font-weight: bold;
 }
 //
 // Darken the hover for dropdowns because of the background color.
 //
 .mobile-nav li li a:hover {
-    background-color: #e6e6e6;
+  background-color: #e6e6e6;
 }
 //
 // For all sub menus
 //
 .mobile-nav ul {
-    border-bottom: 3px solid $pink;
-    background-color: #f6f6f6;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  border-bottom: 3px solid $pink;
+  background-color: #f6f6f6;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .mobile-nav ul a {
-    padding-left: 2.4em;
+  padding-left: 2.4em;
 }
 //
 // Add arrow to menus with dropdowns
 //
 .mobile-nav .menu-item-has-children > a > span {
-    position: absolute;
-    display: block;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 4em;
-    background-color: #f6f6f6;
-    z-index: 1;
-    overflow: hidden;
-    text-indent: -9999px;
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 4em;
+  background-color: #f6f6f6;
+  z-index: 1;
+  overflow: hidden;
+  text-indent: -9999px;
 }
 
 .mobile-nav .menu-item-has-children > a > span::after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(0deg);
-    left: 50%;
-    border-style: solid;
-    border-width: .4em .3em 0 .3em;
-    border-color: $pink transparent transparent transparent;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  left: 50%;
+  border-style: solid;
+  border-width: .4em .3em 0 .3em;
+  border-color: $pink transparent transparent transparent;
 }
 
 .mobile-nav .menu-item-has-children > a > span:hover,
@@ -110,46 +110,46 @@
 //
 
 .hamburger {
-    display: inline-block;
-    cursor: pointer;
-    transition-property: opacity, filter;
-    transition-duration: 0.15s;
-    transition-timing-function: linear;
-    font: inherit;
-    color: inherit;
-    text-transform: none;
-    background-color: transparent;
-    border: 0;
-    margin: 0;
-    overflow: visible;
-    position: relative;
-    z-index: 9;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+  position: relative;
+  z-index: 9;
 }
 
 .hamburger.is-active {
-    position: fixed;
-    top: calc(.8em + .5vw);
-    right: 4%;
+  position: fixed;
+  top: calc(.8em + .5vw);
+  right: 4%;
+  z-index: 10;
 }
 
-
 .hamburger:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .hamburger-box {
-    width: 40px;
-    height: 24px;
-    display: inline-block;
-    position: relative;
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
 }
 
 .hamburger-inner {
-    display: block;
-    top: 50%;
-    margin-top: -2px;
-    transition-duration: 0.075s;
-    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+  transition-duration: 0.075s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 //
 // Position and Color Inactive
@@ -157,14 +157,14 @@
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
-    width: 40px;
-    height: 5px;
-    background-color: $pink;
-    border-radius: 4px;
-    position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease;
+  width: 40px;
+  height: 5px;
+  background-color: $pink;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
 }
 //
 // Color Active
@@ -172,48 +172,48 @@
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-    background-color: $color1;
+  background-color: $color1;
 }
 
 .hamburger-inner::before,
 .hamburger-inner::after {
-    content: "";
-    display: block;
+  content: "";
+  display: block;
 }
 
 .hamburger-inner::before {
-    top: -10px;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+  top: -10px;
+  transition: top 0.075s 0.12s ease, opacity 0.075s ease;
 }
 
 .hamburger-inner::after {
-    bottom: -10px;
-    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  bottom: -10px;
+  transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .hamburger.is-active .hamburger-inner {
-    transform: rotate(45deg);
-    transition-delay: 0.12s;
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: rotate(45deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .hamburger.is-active .hamburger-inner::before {
-    top: 0;
-    opacity: 0;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+  top: 0;
+  opacity: 0;
+  transition: top 0.075s ease, opacity 0.075s 0.12s ease;
 }
 
 .hamburger.is-active .hamburger-inner::after {
-    bottom: 0;
-    transform: rotate(-90deg);
-    transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 //
 // This is here to push the hamburger further down
 // to clear the admin menu when logged in
 //
 .admin-bar .hamburger.is-active {
-    top: calc(3em + .5vw);
+  top: calc(3em + .5vw);
 }
 //
 // Overlay
@@ -223,52 +223,52 @@
 // selector and interferes with these styles
 //
 .overlay-bodigiti {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 800;
-    background-color: rgba(0,0,0,0);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  background-color: rgba(0,0,0,0);
 }
 .overlay-bodigiti.is-active {
-    display: block;
-    background-color: rgba(0,0,0,.8);
+  display: block;
+  background-color: rgba(0,0,0,.8);
 }
 //
 // This class is added to the body to lock scrolling
 // when something is overlayed
 //
 .overlay-is-active {
-    overflow: hidden;
+  overflow: hidden;
 }
 //
 // Drawer
 // The drawer appears from the right and is used for the mobile menu.
 //
 .drawer {
-    position: fixed;
-    z-index: 900;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 95%;
-    max-width: 30em;
-    background: #fff;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    transform: translateX(100%);
-    transition: transform .5s;
-    padding: 5em 2em 2em 2em;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 95%;
+  max-width: 30em;
+  background: #fff;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transform: translateX(100%);
+  transition: transform .5s;
+  padding: 5em 2em 2em 2em;
 }
 .drawer.is-active {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 //
 // This is here to push the contents of the drawer further down
 // to clear the admin menu when logged in
 //
 .admin-bar .drawer {
-    padding-top: 7em;
+  padding-top: 7em;
 }
