@@ -15,13 +15,13 @@
           <div class="product--header">
             {% if page.header.product_sale_price %}
               {% if page.header.out_of_stock %}
-                <div class="product--price"><span style="">SOLD</span>&nbsp;<span class="on-sale" style="">${{ page.header.product_sale_price }}</span></div>
+                <div class="product--price"><span style="color: #999999;">SOLD</span></div>
               {% else %}
                 <div class="product--price"><span style="color: #B20F0F;">SALE</span>&nbsp;<span class="on-sale" style="color: #CD6667;">${{ page.header.product_sale_price }}</span></div>
               {% endif %}
             {% else %}
               {% if page.header.out_of_stock %}
-                <div class="product--price"><span style="">SOLD</span>&nbsp;<span class="" style="">${{ page.header.product_price }}</span></div>
+                <div class="product--price"><span style="color: #999999;">SOLD</span></div>
               {% else %}
                 <div class="product--price">${{ page.header.product_price }}</div>
               {% endif %}

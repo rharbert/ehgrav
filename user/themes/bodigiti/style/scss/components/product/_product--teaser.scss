@@ -38,7 +38,7 @@
   .product--title {
     // Keep long title from wrapping, hide excess text, add ellipsis for excess
     white-space: nowrap;
-    max-width: 73%;
+    max-width: 85%;
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: left;
