@@ -4,8 +4,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 .snipcart-wrapper {
-  height: 48px;
-  z-index: 9;
+  height: 3rem;
   &.snipmobile {
     position: absolute;
     top: 0;
@@ -17,7 +16,8 @@
   &.snipdesktop {
     display: none;
     @include breakpoint($size-lg) {
-      display: inline-block;
+      display: inherit;
+      text-align: center;
     }
   }
   &:hover {
@@ -54,11 +54,10 @@
 // Button: Cart & Cart Items Count
 //
 .snipcart-cart-and-count {
-  font-weight: $font-weight-regular;
-  float: left;
   height: 100%;
   width: 130px;
   width: 9.5rem;
+  font-weight: $font-weight-regular;
   a {
     text-decoration: none;
     @include font-size($font-tiny-plus);
@@ -77,11 +76,11 @@
     background-position: 15px center;
   }
   .snipcart-summary {
-    color: $pink;
     height: 100%;
     float: right;
     padding-top: 12px;
-    padding-top: .75rem;
+    padding-top: .9rem;
     padding-right: 15px;
+    color: $pink;
   }
 }
