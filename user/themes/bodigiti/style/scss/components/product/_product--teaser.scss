@@ -17,6 +17,7 @@
   padding-left: 5px;
   padding-right: 5px;
   margin-bottom: 40px;
+
   @include breakpoint($size-sm-plus) {
     width: 32.75%;
   }
@@ -30,6 +31,7 @@
   }
   .product--header {
     padding-top: 5px;
+    border-top: 1px solid $pink;
   }
   .product--price {
     float: right;
@@ -42,6 +44,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: left;
+    font-weight: $font-weight-regular !important;
   }
   .product--price,
   .product--title {
