@@ -9,6 +9,40 @@
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+// Homepage Hero Img
+////////////////////////////////////////////////////////////////////////////////
+.hero-image {
+  background-image: url('/user/pages/01.home/earringhappiness-golden-background-desktop-min.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding: 4rem;
+  @media only screen and (max-width: $size-xs) {
+    padding: 2rem;
+  }
+  
+  h1 {
+    font-size: 4rem;
+    font-family: "Pacifico";
+    text-align: center;
+    padding-top: 1.5rem;
+    line-height: 3.7rem;
+    @media only screen and (max-width: $size-xs) {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+  }
+  h2 {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-bottom: 0;
+    @media only screen and (max-width: $size-xs) {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
 // Homepage Articles
 ////////////////////////////////////////////////////////////////////////////////
 a.expand {
